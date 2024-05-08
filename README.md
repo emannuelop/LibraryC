@@ -12,7 +12,7 @@ O sistema está sendo desenvolvido em C# com o framework .NET, seguindo os princ
 - ``C#``
 - ``Visual Studio Code``
 - ``.NET framework``
-- - ``SQL Server``
+- ``SQL Server``
 - ``Programação Orientada a Objetos``
 
 ## 👨‍💻 Autores

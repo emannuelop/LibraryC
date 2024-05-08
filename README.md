@@ -3,9 +3,9 @@
 ![Template LibraryC](https://github.com/emannuelop/LibraryC/blob/main/imagens/LibraryC.png)
 
 ## Resumo do projeto
-Este projeto foi desenvolvido como trabalho da disciplina de Tópicos em Programação III da Universidade Estadual do Tocantins - UNITINS. O objetivo era criar um sistema de gerenciamento para biblioteca, chamado LibraryC.
+Este projeto foi concebido como parte integrante do curso de Tópicos em Programação III, ministrado na Universidade Estadual do Tocantins - UNITINS. O seu propósito central consistiu na criação de um sistema de gestão bibliotecária denominado LibraryC.
 
-O projeto foi desenvolvido utilizando a linguagem C#, o framework .NET framework. Os conceitos do paradigma orientado a objetos também foram aplicados.
+A implementação deste sistema foi realizada utilizando a linguagem C# e o framework .NET. Além disso, foram aplicados os princípios e conceitos fundamentais do paradigma orientado a objetos.
 
 ## ✔️ Técnicas e tecnologias utilizadas
 

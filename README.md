@@ -1,6 +1,6 @@
 # LibraryC
 
-![Template LibraryC](https://github.com/emannuelop/JavaPets-eCommerce/blob/main/imagens/javapets.png)
+![Template LibraryC](https://github.com/emannuelop/LibraryC/blob/main/imagens/LibraryC.png)
 
 ## Resumo do projeto
 Este projeto foi desenvolvido como trabalho da disciplina de Tópicos em Programação III da Universidade Estadual do Tocantins - UNITINS. O objetivo era criar um sistema de gerenciamento para biblioteca, chamado LibraryC.

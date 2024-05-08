@@ -5,13 +5,14 @@
 ## Resumo do projeto
 Este projeto foi concebido como parte integrante do curso de Tópicos em Programação III, ministrado na Universidade Estadual do Tocantins - UNITINS. O seu propósito central consistiu na criação de um sistema de gestão bibliotecária denominado LibraryC.
 
-A implementação deste sistema foi realizada utilizando a linguagem C# e o framework .NET. Além disso, foram aplicados os princípios e conceitos fundamentais do paradigma orientado a objetos.
+O sistema está sendo desenvolvido em C# com o framework .NET, seguindo os princípios da orientação a objetos. O banco de dados utilizado será o SQL Server.
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
 - ``C#``
 - ``Visual Studio Code``
 - ``.NET framework``
+- - ``SQL Server``
 - ``Programação Orientada a Objetos``
 
 ## 👨‍💻 Autores

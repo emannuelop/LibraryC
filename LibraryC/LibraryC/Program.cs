@@ -89,6 +89,19 @@ builder.Services.AddScoped<ILivroBibliotecaRepository, LivroBibliotecaRepository
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddAutoMapper(typeof(EntitiesToDTOMappingProfile));
 
+builder.Services.AddCors(options =>
+    options.AddPolicy(
+        "libraryC", policyBuilder =>
+        {
+            policyBuilder.WithOrigins("http://localhost:4200");
+            policyBuilder.AllowAnyHeader();
+            policyBuilder.AllowAnyMethod();
+            policyBuilder.AllowCredentials();
+        }
+        )
+
+) ;
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -105,5 +118,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors("libraryC");
 
 app.Run();

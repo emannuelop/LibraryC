@@ -1,21 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
-import { LocalStorageService } from './local-storage.service';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { User } from '../models/user.model';
+import { Usuario } from '../models/usuario.model';
+import { LocalStorageService } from './local-storage.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private baseURL: string = 'http://localhost:8080/auth';
+  private baseURL: string = 'https://localhost:7217/api/Auth';
   private tokenKey = 'jwt_token';
   private usuarioLogadoKey = 'usuario_logado';
 
-  private usuarioLogadoSubject = new BehaviorSubject<User | null>(null);
-  user$ = this.usuarioLogadoSubject.asObservable();
+  private usuarioLogadoSubject = new BehaviorSubject<Usuario | null>(null);
+  Usuario$ = this.usuarioLogadoSubject.asObservable();
 
   constructor(
               private http: HttpClient, 
@@ -27,9 +27,9 @@ export class AuthService {
   
 
   private initUsuarioLogado() {
-    const user = localStorage.getItem(this.usuarioLogadoKey);
-    if (user) {
-      const usuarioLogado = JSON.parse(user);
+    const Usuario = localStorage.getItem(this.usuarioLogadoKey);
+    if (Usuario) {
+      const usuarioLogado = JSON.parse(Usuario);
 
       this.setUsuarioLogado(usuarioLogado);
       this.usuarioLogadoSubject.next(usuarioLogado);
@@ -42,12 +42,22 @@ export class AuthService {
       password: password
     }
 
+    const sla = this.http.post<string>(`${this.baseURL}/login`, params);
+
+
+    sla.subscribe(data => {
+      console.log(data);
+      this.setToken(data)
+    });
+
+    console.log(this.getToken());
+
     //{ observe: 'response' } para garantir que a resposta completa seja retornada (incluindo o cabeçalho)
-    return this.http.post(`${this.baseURL}`, params, {observe: 'response'}).pipe(
+    return this.http.post(`${this.baseURL}/login`, params, {observe: 'response'}).pipe(
       tap((res: any) => {
         const authToken = res.headers.get('Authorization') ?? '';
+        console.log(res.headers.get('Authorization') ?? '');
         if (authToken) {
-          this.setToken(authToken);
           const usuarioLogado = res.body;
           console.log(usuarioLogado);
           if (usuarioLogado) {
@@ -59,8 +69,8 @@ export class AuthService {
     );
   }
 
-  setUsuarioLogado(user: User): void {
-    this.localStorageService.setItem(this.usuarioLogadoKey, user);
+  setUsuarioLogado(Usuario: Usuario): void {
+    this.localStorageService.setItem(this.usuarioLogadoKey, Usuario);
   }
 
   setToken(token: string): void {
@@ -92,8 +102,8 @@ export class AuthService {
   }
 
   isLoggedIn(): boolean {
-    const user = JSON.parse(localStorage.getItem('usuario_logado') || '{}');
-    return !!user && !!user.token;  // Verifica se há um token de autenticação no objeto user
+    const Usuario = JSON.parse(localStorage.getItem('usuario_logado') || '{}');
+    return !!Usuario && !!Usuario.token;  // Verifica se há um token de autenticação no objeto Usuario
   }
 
 }

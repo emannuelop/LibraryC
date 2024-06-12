@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
       this.authService.login(login, password).subscribe({
         next: (resp) => {
           // redirecionar para a página principal
-          this.router.navigateByUrl('/');
+          this.router.navigateByUrl('/livros');
         },
         error: (err) => {
           console.log(err);

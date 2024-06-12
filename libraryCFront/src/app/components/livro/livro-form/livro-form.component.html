@@ -1,0 +1,67 @@
+<div class="page-container">
+    <mat-toolbar color="#fff">
+        <span class="toolbar-title">Cadastro de Livros</span>
+    </mat-toolbar>
+    <div class="form-container">
+        <mat-card>
+            <mat-card-content>
+                <form [formGroup]="formGroup">
+                    <mat-form-field appearance="fill" class="full-width-input">
+                        <mat-label>Titulo</mat-label>
+                        <input matInput type="text" formControlName="titulo" #inputTitulo />
+                        <mat-error *ngIf="formGroup.get('titulo')?.hasError('apiError')">
+                            {{ formGroup.get('titulo')?.getError('apiError') }}
+                        </mat-error>
+                    </mat-form-field>
+                    <!--begin description-->
+                    <!--end description-->
+                    <!--begin anoPublicacao-->
+                    <mat-form-field appearance="fill" class="full-width-input">
+                        <mat-label>Ano Publicacao</mat-label>
+                        <input matInput type="number" formControlName="anoPublicacao" #inputAnoPublicacao>
+                        <mat-error *ngIf="formGroup.get('anoPublicacao')?.errors && 
+                                        formGroup.get('anoPublicacao')?.touched">
+                            @if (formGroup.get('anoPublicacao')?.hasError('apiError')) {
+                                <span>{{ formGroup.get('anoPublicacao')?.getError('apiError') }}</span>
+                            }
+                        </mat-error>
+                    </mat-form-field>
+                    <!--end price-->
+                    <!--begin inventory-->
+                    <mat-form-field appearance="fill" class="full-width-input">
+                        <mat-label>Id Autor</mat-label>
+                        <input matInput type="number" formControlName="idAutor">
+                        <mat-error *ngIf="formGroup.get('idAutor')?.errors && 
+                                        formGroup.get('idAutor')?.touched">
+
+                            @if (formGroup.get('idAutor')?.hasError('apiError')) {
+                                <span>{{ formGroup.get('idAutor')?.getError('apiError') }}</span>
+                            }
+                        </mat-error>
+                    </mat-form-field>
+                    
+                </form>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button 
+                        color="primary" 
+                        (click)="salvar()">
+                        <!-- [disabled]="formGroup.invalid">  -->
+                    Salvar 
+                </button>
+                <button mat-raised-button 
+                        *ngIf="formGroup?.get('id')?.value"
+                        color="warn" 
+                        (click)="excluir()"
+                        [disabled]="formGroup.invalid"> 
+                    Excluir 
+                </button>
+                <button mat-raised-button  
+                        routerLink="/livros"> 
+                    Cancelar 
+                </button>
+
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

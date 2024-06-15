@@ -48,9 +48,9 @@ namespace LibraryC.Controllers
         {
             var livrobibliotecaUpdate = await _livrobibliotecaRepository.SelecionarPorId(id);
 
-            livrobibliotecaUpdate.Biblioteca = livrobiblioteca.Biblioteca;
-            livrobibliotecaUpdate.Livro = livrobiblioteca.Livro;
-            livrobiblioteca.Quantidade = livrobiblioteca.Quantidade;
+            livrobibliotecaUpdate.IdBiblioteca = livrobiblioteca.IdBiblioteca;
+            livrobibliotecaUpdate.IdLivro = livrobiblioteca.IdLivro;
+            livrobibliotecaUpdate.Quantidade = livrobiblioteca.Quantidade;
 
             _livrobibliotecaRepository.Alterar(livrobibliotecaUpdate);
             if (await _livrobibliotecaRepository.SaveAllAsync())

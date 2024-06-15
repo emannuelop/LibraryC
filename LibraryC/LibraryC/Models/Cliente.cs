@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore;
 namespace LibraryC.Models;
 
 [Table("cliente")]
-[Index("Email", Name = "UQ__cliente__AB6E61648F0F8D14", IsUnique = true)]
-[Index("Cpf", Name = "UQ__cliente__D836E71FA0690B81", IsUnique = true)]
+[Index("Email", Name = "UQ__cliente__AB6E616407A7B8AF", IsUnique = true)]
+[Index("Cpf", Name = "UQ__cliente__D836E71F90420DBC", IsUnique = true)]
 public partial class Cliente
 {
     [Key]

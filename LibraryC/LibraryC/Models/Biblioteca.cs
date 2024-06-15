@@ -27,6 +27,12 @@ public partial class Biblioteca
     [Unicode(false)]
     public string Endereco { get; set; }
 
-    [InverseProperty("BibliotecaNavigation")]
+    [InverseProperty("IdBibliotecaNavigation")]
+    public virtual ICollection<Emprestimo> Emprestimo { get; set; } = new List<Emprestimo>();
+
+    [InverseProperty("IdBibliotecaNavigation")]
     public virtual ICollection<LivroBiblioteca> LivroBiblioteca { get; set; } = new List<LivroBiblioteca>();
+
+    [InverseProperty("IdBibliotecaNavigation")]
+    public virtual ICollection<Usuario> Usuario { get; set; } = new List<Usuario>();
 }

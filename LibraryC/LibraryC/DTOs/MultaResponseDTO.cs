@@ -9,10 +9,12 @@ namespace LibraryC.DTOs
         [Required]
         public int IdMulta { get; set; }
 
-        public int? IdCliente { get; set; }
+        public int IdCliente { get; set; }
 
         public decimal Valor { get; set; }
 
         public DateOnly Data { get; set; }
+
+        public string Motivo { get; set; }
     }
 }

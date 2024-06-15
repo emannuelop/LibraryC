@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore;
 namespace LibraryC.Models;
 
 [Table("usuario")]
-[Index("Email", Name = "UQ__usuario__AB6E6164AD494924", IsUnique = true)]
-[Index("Cpf", Name = "UQ__usuario__D836E71F233B8A4A", IsUnique = true)]
+[Index("Email", Name = "UQ__usuario__AB6E6164A876FDE6", IsUnique = true)]
+[Index("Cpf", Name = "UQ__usuario__D836E71F932DAC61", IsUnique = true)]
 public partial class Usuario
 {
     [Key]
@@ -45,4 +45,11 @@ public partial class Usuario
     [StringLength(14)]
     [Unicode(false)]
     public string Cpf { get; set; }
+
+    [Column("id_biblioteca")]
+    public int? IdBiblioteca { get; set; }
+
+    [ForeignKey("IdBiblioteca")]
+    [InverseProperty("Usuario")]
+    public virtual Biblioteca IdBibliotecaNavigation { get; set; }
 }

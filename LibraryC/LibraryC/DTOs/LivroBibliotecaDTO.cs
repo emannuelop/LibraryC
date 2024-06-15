@@ -3,9 +3,9 @@
     public class LivroBibliotecaDTO
     {
 
-        public int? Livro { get; set; }
+        public int IdLivro { get; set; }
 
-        public int? Biblioteca { get; set; }
+        public int IdBiblioteca { get; set; }
 
         public int Quantidade { get; set; }
     }

@@ -8143,11 +8143,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Erick Santos\\Desktop\\Unitins\\C#\\LibraryC\\LibraryC\\LibraryC.csproj",
+      "projectUniqueName": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\LibraryC.csproj",
       "projectName": "LibraryC",
-      "projectPath": "C:\\Users\\Erick Santos\\Desktop\\Unitins\\C#\\LibraryC\\LibraryC\\LibraryC.csproj",
+      "projectPath": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\LibraryC.csproj",
       "packagesPath": "C:\\Users\\Erick Santos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Erick Santos\\Desktop\\Unitins\\C#\\LibraryC\\LibraryC\\obj\\",
+      "outputPath": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Erick Santos\\AppData\\Roaming\\NuGet\\NuGet.Config",

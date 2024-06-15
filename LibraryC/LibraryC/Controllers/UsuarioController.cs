@@ -36,10 +36,14 @@ namespace LibraryC.Controllers
         [HttpPost]
         public async Task<ActionResult> CadastrarUsuario(UsuarioDTO usuario)
         {
-            _usuarioRepository.Incluir(_mapper.Map<Usuario>(usuario));
-            if (await _usuarioRepository.SaveAllAsync())
+
+            if (usuario.Perfil == "admin"|| usuario.Perfil == "funcionario")
             {
-                return Ok("Usuario cadastrado com sucesso");
+                _usuarioRepository.Incluir(_mapper.Map<Usuario>(usuario));
+                if (await _usuarioRepository.SaveAllAsync())
+                {
+                    return Ok("Usuario cadastrado com sucesso");
+                }
             }
 
             return BadRequest("Erro ao salvar usuario");
@@ -48,18 +52,23 @@ namespace LibraryC.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult> AlterarUsuario(int id, UsuarioDTO usuario)
         {
-            var usuarioUpdate = await _usuarioRepository.SelecionarPorId(id);
 
-            usuarioUpdate.Nome = usuario.Nome;
-            usuarioUpdate.Cpf = usuario.Cpf;
-            usuarioUpdate.Perfil = usuario.Perfil;
-            usuarioUpdate.Senha = usuario.Senha;
-            usuarioUpdate.Email = usuario.Email;
-
-            _usuarioRepository.Alterar(usuarioUpdate);
-            if (await _usuarioRepository.SaveAllAsync())
+            if (usuario.Perfil == "admin" || usuario.Perfil == "funcionario")
             {
-                return Ok("Usuario alterado com sucesso");
+
+                var usuarioUpdate = await _usuarioRepository.SelecionarPorId(id);
+
+                usuarioUpdate.Nome = usuario.Nome;
+                usuarioUpdate.Cpf = usuario.Cpf;
+                usuarioUpdate.Perfil = usuario.Perfil;
+                usuarioUpdate.Senha = usuario.Senha;
+                usuarioUpdate.Email = usuario.Email;
+
+                _usuarioRepository.Alterar(usuarioUpdate);
+                if (await _usuarioRepository.SaveAllAsync())
+                {
+                    return Ok("Usuario alterado com sucesso");
+                }
             }
 
             return BadRequest("Erro ao alterar usuario");

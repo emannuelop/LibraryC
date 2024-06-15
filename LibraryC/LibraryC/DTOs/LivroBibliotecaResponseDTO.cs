@@ -9,9 +9,9 @@ namespace LibraryC.DTOs
         [Required]
         public int IdLivroBiblioteca { get; set; }
 
-        public int? Livro { get; set; }
+        public int IdLivro { get; set; }
 
-        public int? Biblioteca { get; set; }
+        public int IdBiblioteca { get; set; }
 
         public int Quantidade { get; set; }
     }

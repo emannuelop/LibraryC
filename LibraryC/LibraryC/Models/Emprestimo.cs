@@ -16,19 +16,32 @@ public partial class Emprestimo
     public int IdEmprestimo { get; set; }
 
     [Column("id_cliente")]
-    public int? IdCliente { get; set; }
+    public int IdCliente { get; set; }
 
     [Column("id_livro")]
-    public int? IdLivro { get; set; }
+    public int IdLivro { get; set; }
 
     [Column("data_emprestimo")]
-    public DateOnly DataEmprestimo { get; set; }
+    public DateOnly? DataEmprestimo { get; set; }
 
     [Column("data_devolucao")]
     public DateOnly? DataDevolucao { get; set; }
 
     [Column("data_prevista_devolucao")]
-    public DateOnly DataPrevistaDevolucao { get; set; }
+    public DateOnly? DataPrevistaDevolucao { get; set; }
+
+    [Required]
+    [Column("status")]
+    [StringLength(20)]
+    [Unicode(false)]
+    public string Status { get; set; }
+
+    [Column("id_biblioteca")]
+    public int? IdBiblioteca { get; set; }
+
+    [ForeignKey("IdBiblioteca")]
+    [InverseProperty("Emprestimo")]
+    public virtual Biblioteca IdBibliotecaNavigation { get; set; }
 
     [ForeignKey("IdCliente")]
     [InverseProperty("Emprestimo")]

@@ -49,6 +49,7 @@ namespace LibraryC.Controllers
             var bibliotecaUpdate = await _bibliotecaRepository.SelecionarPorId(id);
 
             bibliotecaUpdate.Nome = biblioteca.Nome;
+            bibliotecaUpdate.Endereco = biblioteca.Endereco;
 
             _bibliotecaRepository.Alterar(bibliotecaUpdate);
             if (await _bibliotecaRepository.SaveAllAsync())

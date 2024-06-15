@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KXrjwVcUwoJWVbpbVnhWJCHWXXWUgnRA/FuMY10BJla1ozDwu+67v/lzb5iKM6o3y7U1iw514ULqGAaCgAenKA==",
+  "dgSpecHash": "0BbioES2Ct/4l0vajLp1g6PvRiQFu84/S3CoGLXGgCs/Rv+I9k03FGj1cDPecCLzFpzeGVwePnLEDYsL5EUyfQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Erick Santos\\Desktop\\Unitins\\C#\\LibraryC\\LibraryC\\LibraryC.csproj",
+  "projectFilePath": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\LibraryC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Erick Santos\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Erick Santos\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

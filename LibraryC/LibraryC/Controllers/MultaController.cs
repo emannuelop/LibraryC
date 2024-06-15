@@ -34,7 +34,17 @@ namespace LibraryC.Controllers
         [HttpPost]
         public async Task<ActionResult> CadastrarMulta(MultaDTO multa)
         {
-            _multaRepository.Incluir(_mapper.Map<Multa>(multa));
+
+            DateOnly dataAtual = DateOnly.FromDateTime(DateTime.Now);
+
+            var multaPost = new Multa();
+            multaPost.Status = "Em andamento";
+            multaPost.Valor = multa.Valor;
+            multaPost.IdCliente = multa.IdCliente;
+            multaPost.Motivo = multa.Motivo;
+            multaPost.Data = dataAtual;
+
+            _multaRepository.Incluir(multaPost);
             if (await _multaRepository.SaveAllAsync())
             {
                 return Ok("Multa cadastrado com sucesso");
@@ -48,8 +58,9 @@ namespace LibraryC.Controllers
         {
             var multaUpdate = await _multaRepository.SelecionarPorId(id);
 
-            multaUpdate.IdCliente = multa.IdCliente;
             multaUpdate.Valor = multa.Valor;
+            multaUpdate.IdCliente = multa.IdCliente;
+            multaUpdate.Motivo = multa.Motivo;
 
             _multaRepository.Alterar(multaUpdate);
             if (await _multaRepository.SaveAllAsync())

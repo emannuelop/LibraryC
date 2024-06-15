@@ -34,6 +34,6 @@ public partial class Livro
     [InverseProperty("Livro")]
     public virtual Autor IdAutorNavigation { get; set; }
 
-    [InverseProperty("LivroNavigation")]
+    [InverseProperty("IdLivroNavigation")]
     public virtual ICollection<LivroBiblioteca> LivroBiblioteca { get; set; } = new List<LivroBiblioteca>();
 }

@@ -15,20 +15,20 @@ public partial class LivroBiblioteca
     [Column("id_livro_biblioteca")]
     public int IdLivroBiblioteca { get; set; }
 
-    [Column("livro")]
-    public int? Livro { get; set; }
+    [Column("id_livro")]
+    public int? IdLivro { get; set; }
 
-    [Column("biblioteca")]
-    public int? Biblioteca { get; set; }
+    [Column("id_biblioteca")]
+    public int? IdBiblioteca { get; set; }
 
     [Column("quantidade")]
     public int Quantidade { get; set; }
 
-    [ForeignKey("Biblioteca")]
+    [ForeignKey("IdBiblioteca")]
     [InverseProperty("LivroBiblioteca")]
-    public virtual Biblioteca BibliotecaNavigation { get; set; }
+    public virtual Biblioteca IdBibliotecaNavigation { get; set; }
 
-    [ForeignKey("Livro")]
+    [ForeignKey("IdLivro")]
     [InverseProperty("LivroBiblioteca")]
-    public virtual Livro LivroNavigation { get; set; }
+    public virtual Livro IdLivroNavigation { get; set; }
 }

@@ -33,54 +33,64 @@ public partial class LibrarycContext : DbContext
     {
         modelBuilder.Entity<Autor>(entity =>
         {
-            entity.HasKey(e => e.IdAutor).HasName("PK__autor__5FC3872DE7AFBC7E");
+            entity.HasKey(e => e.IdAutor).HasName("PK__autor__5FC3872DC301C732");
         });
 
         modelBuilder.Entity<Biblioteca>(entity =>
         {
-            entity.HasKey(e => e.IdBiblioteca).HasName("PK__bibliote__1EEBBDFEAF780565");
+            entity.HasKey(e => e.IdBiblioteca).HasName("PK__bibliote__1EEBBDFE281AC4B8");
         });
 
         modelBuilder.Entity<Cliente>(entity =>
         {
-            entity.HasKey(e => e.IdCliente).HasName("PK__cliente__677F38F5662BD2FF");
+            entity.HasKey(e => e.IdCliente).HasName("PK__cliente__677F38F5CA8CA5A3");
         });
 
         modelBuilder.Entity<Emprestimo>(entity =>
         {
-            entity.HasKey(e => e.IdEmprestimo).HasName("PK__empresti__45FD187E70A8E12D");
+            entity.HasKey(e => e.IdEmprestimo).HasName("PK__empresti__45FD187E42C5A0B8");
 
-            entity.HasOne(d => d.IdClienteNavigation).WithMany(p => p.Emprestimo).HasConstraintName("FK__emprestim__id_cl__4D94879B");
+            entity.HasOne(d => d.IdBibliotecaNavigation).WithMany(p => p.Emprestimo).HasConstraintName("FK__emprestim__id_bi__4D94879B");
 
-            entity.HasOne(d => d.IdLivroNavigation).WithMany(p => p.Emprestimo).HasConstraintName("FK__emprestim__id_li__4E88ABD4");
+            entity.HasOne(d => d.IdClienteNavigation).WithMany(p => p.Emprestimo)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__emprestim__id_cl__4E88ABD4");
+
+            entity.HasOne(d => d.IdLivroNavigation).WithMany(p => p.Emprestimo)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__emprestim__id_li__4F7CD00D");
         });
 
         modelBuilder.Entity<Livro>(entity =>
         {
-            entity.HasKey(e => e.IdLivro).HasName("PK__livro__C252147D8E52CF6E");
+            entity.HasKey(e => e.IdLivro).HasName("PK__livro__C252147DF73055FC");
 
-            entity.HasOne(d => d.IdAutorNavigation).WithMany(p => p.Livro).HasConstraintName("FK__livro__id_autor__44FF419A");
+            entity.HasOne(d => d.IdAutorNavigation).WithMany(p => p.Livro).HasConstraintName("FK__livro__id_autor__46E78A0C");
         });
 
         modelBuilder.Entity<LivroBiblioteca>(entity =>
         {
-            entity.HasKey(e => e.IdLivroBiblioteca).HasName("PK__livro_bi__C7822DFE973F5B82");
+            entity.HasKey(e => e.IdLivroBiblioteca).HasName("PK__livro_bi__C7822DFEA5F88D41");
 
-            entity.HasOne(d => d.BibliotecaNavigation).WithMany(p => p.LivroBiblioteca).HasConstraintName("FK__livro_bib__bibli__60A75C0F");
+            entity.HasOne(d => d.IdBibliotecaNavigation).WithMany(p => p.LivroBiblioteca).HasConstraintName("FK__livro_bib__id_bi__4AB81AF0");
 
-            entity.HasOne(d => d.LivroNavigation).WithMany(p => p.LivroBiblioteca).HasConstraintName("FK__livro_bib__livro__5FB337D6");
+            entity.HasOne(d => d.IdLivroNavigation).WithMany(p => p.LivroBiblioteca).HasConstraintName("FK__livro_bib__id_li__49C3F6B7");
         });
 
         modelBuilder.Entity<Multa>(entity =>
         {
-            entity.HasKey(e => e.IdMulta).HasName("PK__multa__295650BBA28E50D4");
+            entity.HasKey(e => e.IdMulta).HasName("PK__multa__295650BB36BC9AE5");
 
-            entity.HasOne(d => d.IdClienteNavigation).WithMany(p => p.Multa).HasConstraintName("FK__multa__id_client__403A8C7D");
+            entity.HasOne(d => d.IdClienteNavigation).WithMany(p => p.Multa)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__multa__id_client__4222D4EF");
         });
 
         modelBuilder.Entity<Usuario>(entity =>
         {
-            entity.HasKey(e => e.IdUsuario).HasName("PK__usuario__4E3E04AD2F600AEF");
+            entity.HasKey(e => e.IdUsuario).HasName("PK__usuario__4E3E04AD8C3DEA94");
+
+            entity.HasOne(d => d.IdBibliotecaNavigation).WithMany(p => p.Usuario).HasConstraintName("FK__usuario__id_bibl__3B75D760");
         });
 
         OnModelCreatingPartial(modelBuilder);

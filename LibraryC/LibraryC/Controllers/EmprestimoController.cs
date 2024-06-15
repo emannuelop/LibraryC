@@ -13,12 +13,15 @@ namespace LibraryC.Controllers
     {
         private readonly IEmprestimoRepository _emprestimoRepository;
 
+        private readonly ILivroBibliotecaRepository _livroBibliotecaRepository;
+
         private readonly IMapper _mapper;
 
-        public EmprestimoController(IEmprestimoRepository emprestimoRepository, IMapper mapper)
+        public EmprestimoController(IEmprestimoRepository emprestimoRepository, IMapper mapper, ILivroBibliotecaRepository livroBibliotecaRepository)
         {
             _emprestimoRepository = emprestimoRepository;
             _mapper = mapper;
+            _livroBibliotecaRepository = livroBibliotecaRepository;
         }
 
 
@@ -34,7 +37,23 @@ namespace LibraryC.Controllers
         [HttpPost]
         public async Task<ActionResult> CadastrarEmprestimo(EmprestimoDTO emprestimo)
         {
-            _emprestimoRepository.Incluir(_mapper.Map<Emprestimo>(emprestimo));
+            DateOnly dataAtual = DateOnly.FromDateTime(DateTime.Now);
+
+            var livroBiblioteca = await _livroBibliotecaRepository.LivroBibliotecaPorIdLivroEIdBiblioteca(emprestimo.IdLivro,1);
+
+            Emprestimo newEmprestimo = new Emprestimo();
+
+            newEmprestimo.IdLivro = emprestimo.IdLivro;
+            newEmprestimo.IdCliente = emprestimo.IdCliente;
+            newEmprestimo.DataPrevistaDevolucao = emprestimo.DataPrevistaDevolucao;
+            newEmprestimo.DataEmprestimo = dataAtual;
+            newEmprestimo.Status = "Nao devolvido";
+
+
+
+
+            _emprestimoRepository.Incluir(newEmprestimo);
+            _livroBibliotecaRepository.DiminuirQuantidadeLivro(livroBiblioteca);
             if (await _emprestimoRepository.SaveAllAsync())
             {
                 return Ok("Emprestimo cadastrado com sucesso");
@@ -50,6 +69,7 @@ namespace LibraryC.Controllers
 
             emprestimoUpdate.IdCliente = emprestimo.IdCliente;
             emprestimoUpdate.IdLivro = emprestimo.IdLivro;
+            emprestimoUpdate.DataPrevistaDevolucao = emprestimo.DataPrevistaDevolucao;
 
             _emprestimoRepository.Alterar(emprestimoUpdate);
             if (await _emprestimoRepository.SaveAllAsync())

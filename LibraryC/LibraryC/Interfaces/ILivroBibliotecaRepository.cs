@@ -14,6 +14,10 @@ namespace LibraryC.Interfaces
 
         Task<IEnumerable<LivroBiblioteca>> SelecionarTodos();
 
+        Task<LivroBiblioteca> LivroBibliotecaPorIdLivroEIdBiblioteca(int idLivro, int idBiblioteca);
+
+        void DiminuirQuantidadeLivro(LivroBiblioteca livroBiblioteca);
+
         Task<bool> SaveAllAsync();
     }
 }

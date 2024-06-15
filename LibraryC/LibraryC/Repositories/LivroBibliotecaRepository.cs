@@ -43,5 +43,22 @@ namespace LibraryC.Repositories
         {
             return await _context.LivroBiblioteca.ToListAsync();
         }
+
+        public async Task<LivroBiblioteca> LivroBibliotecaPorIdLivroEIdBiblioteca(int idLivro, int idBiblioteca)
+        {
+            return await _context.LivroBiblioteca
+            .Where(lb => lb.IdLivro == idLivro && lb.IdBiblioteca == idBiblioteca)
+            .FirstOrDefaultAsync();
+        }
+
+        public void DiminuirQuantidadeLivro(LivroBiblioteca livroBiblioteca)
+        {
+            livroBiblioteca.Quantidade--; // Diminui a quantidade disponível do livro
+
+            _context.Entry(livroBiblioteca).State = EntityState.Modified;
+
+
+        }
+
     }
 }

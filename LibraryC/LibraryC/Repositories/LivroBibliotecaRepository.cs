@@ -41,7 +41,7 @@ namespace LibraryC.Repositories
 
         public async Task<IEnumerable<LivroBiblioteca>> SelecionarTodos()
         {
-            return await _context.LivroBiblioteca.ToListAsync();
+            return await _context.LivroBiblioteca.Include(lb => lb.IdBibliotecaNavigation).ToListAsync();
         }
 
         public async Task<LivroBiblioteca> LivroBibliotecaPorIdLivroEIdBiblioteca(int idLivro, int idBiblioteca)

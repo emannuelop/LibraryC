@@ -38,6 +38,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     if (this.loginForm.valid) {
+      console.log(this.loginForm.get('login')!.value);
       const login = this.loginForm.get('login')!.value;
       const password = this.loginForm.get('password')!.value;
       this.authService.login(login, password).subscribe({

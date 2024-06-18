@@ -16,10 +16,13 @@ namespace LibraryC.Controllers
 
         private readonly IMapper _mapper;
 
-        public UsuarioController(IUsuarioRepository usuarioRepository, IMapper mapper)
+        private readonly ITokenService _tokenService;
+
+        public UsuarioController(IUsuarioRepository usuarioRepository, IMapper mapper, ITokenService tokenService)
         {
             _usuarioRepository = usuarioRepository;
             _mapper = mapper;
+            _tokenService = tokenService;
         }
 
 
@@ -39,7 +42,16 @@ namespace LibraryC.Controllers
 
             if (usuario.Perfil == "admin"|| usuario.Perfil == "funcionario")
             {
-                _usuarioRepository.Incluir(_mapper.Map<Usuario>(usuario));
+
+                Usuario usuarioUpdate = new Usuario();
+
+                usuarioUpdate.Nome = usuario.Nome;
+                usuarioUpdate.Cpf = usuario.Cpf;
+                usuarioUpdate.Perfil = usuario.Perfil;
+                usuarioUpdate.Senha = _tokenService.HashPassword(usuario.Senha);
+                usuarioUpdate.Email = usuario.Email;
+
+                _usuarioRepository.Incluir(usuarioUpdate);
                 if (await _usuarioRepository.SaveAllAsync())
                 {
                     return Ok("Usuario cadastrado com sucesso");
@@ -61,7 +73,6 @@ namespace LibraryC.Controllers
                 usuarioUpdate.Nome = usuario.Nome;
                 usuarioUpdate.Cpf = usuario.Cpf;
                 usuarioUpdate.Perfil = usuario.Perfil;
-                usuarioUpdate.Senha = usuario.Senha;
                 usuarioUpdate.Email = usuario.Email;
 
                 _usuarioRepository.Alterar(usuarioUpdate);

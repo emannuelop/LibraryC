@@ -1,0 +1,77 @@
+<div class="page-container">
+    <mat-toolbar color="#fff">
+        <span class="toolbar-title">Cadastro de Usuarios</span>
+    </mat-toolbar>
+    <div class="form-container">
+        <mat-card>
+            <mat-card-content>
+                <form [formGroup]="formGroup">
+                    <mat-form-field appearance="fill" class="full-width-input">
+                        <mat-label>Nome</mat-label>
+                        <input matInput type="text" formControlName="nome" #inputname />
+                        <mat-error *ngIf="formGroup.get('nome')?.hasError('apiError')">
+                            {{ formGroup.get('nome')?.getError('apiError') }}
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="full-width-input">
+                        <mat-label>email</mat-label>
+                        <input matInput type="text" formControlName="email" #inputEmail>
+                        <mat-error *ngIf="formGroup.get('email')?.errors && 
+                                        formGroup.get('email')?.touched">
+                            @if (formGroup.get('email')?.hasError('apiError')) {
+                                <span>{{ formGroup.get('email')?.getError('apiError') }}</span>
+                            }
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="full-width-input">
+                        <mat-label>cpf</mat-label>
+                        <input matInput type="text" formControlName="cpf">
+                        <mat-error *ngIf="formGroup.get('cpf')?.errors && 
+                                        formGroup.get('cpf')?.touched">
+
+                            @if (formGroup.get('cpf')?.hasError('apiError')) {
+                                <span>{{ formGroup.get('cpf')?.getError('apiError') }}</span>
+                            }
+                        </mat-error>
+                    </mat-form-field>
+                    
+
+                    <mat-form-field appearance="fill" class="full-width-input">
+                        <mat-label>Telefone</mat-label>
+                        <input matInput type="text" formControlName="telefone">
+                        <mat-error *ngIf="formGroup.get('telefone')?.errors && 
+                                        formGroup.get('telefone')?.touched">
+
+                            @if (formGroup.get('telefone')?.hasError('apiError')) {
+                                <span>{{ formGroup.get('telefone')?.getError('apiError') }}</span>
+                            }
+                        </mat-error>
+                    </mat-form-field>
+                    
+                </form>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button 
+                        color="primary" 
+                        (click)="salvar()">
+                        <!-- [disabled]="formGroup.invalid">  -->
+                    Salvar 
+                </button>
+                <button mat-raised-button 
+                        *ngIf="formGroup?.get('id')?.value"
+                        color="warn" 
+                        (click)="excluir()"
+                        [disabled]="formGroup.invalid"> 
+                    Excluir 
+                </button>
+                <button mat-raised-button  
+                        routerLink="/usuarios"> 
+                    Cancelar 
+                </button>
+
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

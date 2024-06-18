@@ -5,6 +5,7 @@ using LibraryC.Repositories;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace LibraryC.Services
@@ -19,7 +20,7 @@ namespace LibraryC.Services
             _usuarioRepository = usuarioRepository;
         }
 
-        public string GenerateToken(LoginDTO usuario)
+        public string GenerateToken(Usuario usuario)
         {
             var user = _usuarioRepository.SelecionarPorEmail(usuario.Email);
             if (user == null)
@@ -47,6 +48,30 @@ namespace LibraryC.Services
             var token = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
             return token;
 
+        }
+
+        public string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                // ComputeHash - retorna um array de bytes
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+                // Convertendo bytes para uma string hexadecimal
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
+        public bool VerifyPassword(string password, string hashedPassword)
+        {
+            // Hash a senha de entrada e compare-a com a senha já hasheada
+            string hashedInput = HashPassword(password);
+            return hashedInput.Equals(hashedPassword, StringComparison.OrdinalIgnoreCase);
         }
     }
 }

@@ -52,6 +52,7 @@ export class BibliotecaFormComponent implements OnInit {
     });
   }
   ngOnInit(): void {
+    this.initializeForm();
   }
 
   initializeForm() {
@@ -62,7 +63,7 @@ export class BibliotecaFormComponent implements OnInit {
 
     this.formGroup = this.formBuilder.group({
       idBiblioteca: [(biblioteca && biblioteca.idBiblioteca) ? biblioteca.idBiblioteca : null],
-      titulo: [(biblioteca && biblioteca.nome) ? biblioteca.nome : '', 
+      nome: [(biblioteca && biblioteca.nome) ? biblioteca.nome : '', 
         Validators.compose([Validators.required, 
                             Validators.minLength(3)])],
       endereco: [(biblioteca && biblioteca.endereco) ? biblioteca.endereco : null],

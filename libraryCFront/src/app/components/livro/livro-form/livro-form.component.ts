@@ -53,11 +53,14 @@ export class LivroFormComponent implements OnInit {
     });
   }
   ngOnInit(): void {
+    this.initializeForm();
   }
 
   initializeForm() {
 
     const livro: Livro = this.activatedRoute.snapshot.data['livro'];
+
+    console.log();
 
     // selecionando as associações
 

@@ -52,6 +52,7 @@ export class AutorFormComponent implements OnInit {
     });
   }
   ngOnInit(): void {
+    this.initializeForm();
   }
 
   initializeForm() {

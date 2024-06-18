@@ -97,6 +97,7 @@ builder.Services.AddCors(options =>
             policyBuilder.AllowAnyHeader();
             policyBuilder.AllowAnyMethod();
             policyBuilder.AllowCredentials();
+            policyBuilder.WithExposedHeaders("Authorization");
         }
         )
 

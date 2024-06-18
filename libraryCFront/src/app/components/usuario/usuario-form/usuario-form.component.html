@@ -1,6 +1,6 @@
 <div class="page-container">
     <mat-toolbar color="#fff">
-        <span class="toolbar-title">Cadastro de Livros</span>
+        <span class="toolbar-title">Cadastro de Usuarios</span>
     </mat-toolbar>
     <div class="form-container">
         <mat-card>
@@ -8,15 +8,15 @@
                 <form [formGroup]="formGroup">
                     <mat-form-field appearance="fill" class="full-width-input">
                         <mat-label>Nome</mat-label>
-                        <input matInput type="text" formControlName="name" #inputname />
-                        <mat-error *ngIf="formGroup.get('name')?.hasError('apiError')">
-                            {{ formGroup.get('name')?.getError('apiError') }}
+                        <input matInput type="text" formControlName="nome" #inputname />
+                        <mat-error *ngIf="formGroup.get('nome')?.hasError('apiError')">
+                            {{ formGroup.get('nome')?.getError('apiError') }}
                         </mat-error>
                     </mat-form-field>
 
                     <mat-form-field appearance="fill" class="full-width-input">
                         <mat-label>email</mat-label>
-                        <input matInput type="number" formControlName="email" #inputEmail>
+                        <input matInput type="text" formControlName="email" #inputEmail>
                         <mat-error *ngIf="formGroup.get('email')?.errors && 
                                         formGroup.get('email')?.touched">
                             @if (formGroup.get('email')?.hasError('apiError')) {
@@ -27,7 +27,7 @@
 
                     <mat-form-field appearance="fill" class="full-width-input">
                         <mat-label>cpf</mat-label>
-                        <input matInput type="number" formControlName="cpf">
+                        <input matInput type="text" formControlName="cpf">
                         <mat-error *ngIf="formGroup.get('cpf')?.errors && 
                                         formGroup.get('cpf')?.touched">
 
@@ -36,15 +36,28 @@
                             }
                         </mat-error>
                     </mat-form-field>
+                    
 
                     <mat-form-field appearance="fill" class="full-width-input">
                         <mat-label>Senha</mat-label>
-                        <input matInput type="number" formControlName="cpf">
-                        <mat-error *ngIf="formGroup.get('password')?.errors && 
-                                        formGroup.get('password')?.touched">
+                        <input matInput type="text" formControlName="senha">
+                        <mat-error *ngIf="formGroup.get('senha')?.errors && 
+                                        formGroup.get('senha')?.touched">
 
-                            @if (formGroup.get('password')?.hasError('apiError')) {
-                                <span>{{ formGroup.get('password')?.getError('apiError') }}</span>
+                            @if (formGroup.get('senha')?.hasError('apiError')) {
+                                <span>{{ formGroup.get('senha')?.getError('apiError') }}</span>
+                            }
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="full-width-input">
+                        <mat-label>Perfil</mat-label>
+                        <input matInput type="text" formControlName="perfil">
+                        <mat-error *ngIf="formGroup.get('perfil')?.errors && 
+                                        formGroup.get('perfil')?.touched">
+
+                            @if (formGroup.get('perfil')?.hasError('apiError')) {
+                                <span>{{ formGroup.get('perfil')?.getError('apiError') }}</span>
                             }
                         </mat-error>
                     </mat-form-field>
@@ -66,7 +79,7 @@
                     Excluir 
                 </button>
                 <button mat-raised-button  
-                        routerLink="/livros"> 
+                        routerLink="/usuarios"> 
                     Cancelar 
                 </button>
 

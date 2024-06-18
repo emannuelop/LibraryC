@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">
+        <button (click)="clickMenu()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+      
+        <div class="toolbar-center">
+          <form class="search-form" (ngSubmit)="onSubmit()">
+            <div class="input-wrapper">
+              <input class="search-input" type="text" [(ngModel)]="searchQuery" name="searchQuery" placeholder="Buscar Livros" />
+              <button *ngIf="searchQuery" class="clear-button" type="button" (click)="clearSearch()">✕</button>
+            </div>
+            <button class="search-button" type="submit"><mat-icon>search</mat-icon></button>
+          </form>
+        </div>
+      
+          <div class="login-container" (mouseenter)="showLoginOptions = true" (mouseleave)="showLoginOptions = false">
+            <ng-container *ngIf="usuarioLogado; else loginButton">
+              <span class="profile-name">{{usuarioLogado.nome}}</span>
+              <div *ngIf="showLoginOptions" class="login-options">
+                <button mat-button (click)="dashboard()">
+                  <mat-icon>account_box</mat-icon>
+                  Meus Dados
+                </button>
+                <button mat-button (click)="deslogar()">
+                  <mat-icon>exit_to_app</mat-icon>
+                  Sair
+                </button>
+              </div>
+            </ng-container>
+            <ng-template #loginButton>
+              <button mat-button routerLink="/login">
+                Entrar
+              </button>
+            </ng-template>
+          </div>
+</mat-toolbar>

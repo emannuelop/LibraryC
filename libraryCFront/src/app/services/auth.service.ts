@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { JwtHelperService } from '@auth0/angular-jwt';
@@ -36,7 +36,7 @@ export class AuthService {
     }
   }
 
-  login(login: string, password: string): Observable<any> {
+  login(login: string, password: string): Observable<HttpResponse<any>> {
     const params = {
       email: login,
       password: password
@@ -44,22 +44,16 @@ export class AuthService {
 
     const sla = this.http.post<string>(`${this.baseURL}/login`, params);
 
-
-    sla.subscribe(data => {
-      console.log(data);
-      this.setToken(data)
-    });
-
-    console.log(this.getToken());
-
     //{ observe: 'response' } para garantir que a resposta completa seja retornada (incluindo o cabeçalho)
-    return this.http.post(`${this.baseURL}/login`, params, {observe: 'response'}).pipe(
-      tap((res: any) => {
-        const authToken = res.headers.get('Authorization') ?? '';
-        console.log(res.headers.get('Authorization') ?? '');
+    return this.http.post<HttpResponse<any>>(`${this.baseURL}/login`, params, { observe: 'response' }).pipe(
+      tap((res: HttpResponse<any>) => {
+        const authToken = res.headers.get('authorization') ?? '';
+        console.log('Authorization Header:', authToken);
+
         if (authToken) {
           const usuarioLogado = res.body;
-          console.log(usuarioLogado);
+          console.log('Usuario Logado:', usuarioLogado);
+
           if (usuarioLogado) {
             this.setUsuarioLogado(usuarioLogado);
             this.usuarioLogadoSubject.next(usuarioLogado);

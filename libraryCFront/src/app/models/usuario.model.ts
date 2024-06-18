@@ -1,7 +1,8 @@
 export class Usuario {
     id!: number;
-    name!: string
+    nome!: string
     email!: String
     cpf!: String
-    password!: string
+    perfil!: String
+    senha!: string
 }

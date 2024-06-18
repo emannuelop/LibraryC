@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LibraryC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0de729f24ff50b1326baffa4f0c2251f6b67bd28")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3bcbc3a202b2eefcdc1fec8232bda72ef54db502")]
 [assembly: System.Reflection.AssemblyProductAttribute("LibraryC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LibraryC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

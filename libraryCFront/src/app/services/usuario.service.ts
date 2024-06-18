@@ -25,10 +25,11 @@ export class UsuarioService {
   insert(usuario: Usuario): Observable<Usuario> {
     
     const obj = {
-      name: usuario.name,
+      nome: usuario.nome,
       email : usuario.email,
-      cpf: usuario.cpf,
-      password: usuario.password
+      senha: usuario.senha,
+      perfil: usuario.perfil,
+      cpf: usuario.cpf
     }
 
     return this.httpClient.post<Usuario>(this.baseUrl, obj);
@@ -36,10 +37,11 @@ export class UsuarioService {
   
   update(usuario: Usuario): Observable<Usuario> {
     const obj = {
-        name: usuario.name,
+        nome: usuario.nome,
         email : usuario.email,
         cpf: usuario.cpf,
-        password: usuario.password
+        perfil: usuario.perfil,
+        senha: usuario.senha
     }
     return this.httpClient.put<Usuario>(`${this.baseUrl}/${usuario.id}`, obj);
   }

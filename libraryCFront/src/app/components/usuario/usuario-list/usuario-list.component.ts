@@ -28,7 +28,7 @@ import {
   styleUrl: './usuario-list.component.css'
 })
 export class UsuarioListComponent implements OnInit {
-  displayedColumns: string[] = ['idUsuario', 'name', 'email' , 'cpf', 'password'];
+  displayedColumns: string[] = ['idUsuario', 'nome', 'email' , 'cpf', 'senha'];
   usuarios: Usuario[] = [];
 
   // variaveis de controle de paginacao

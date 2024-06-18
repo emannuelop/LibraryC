@@ -47,13 +47,15 @@ export class UsuarioFormComponent implements OnInit {
 
     this.formGroup = formBuilder.group({
       idUsuario: [(usuario && usuario.id) ? usuario.id : null],
-      name: ['', Validators.required],
-      email: [null],
-      cpf: [null],
-      password: [null]
+      nome: ['', Validators.required],
+      email: ['', Validators.required],
+      cpf: ['', Validators.required],
+      perfil: ['', Validators.required],
+      senha: ['', Validators.required]
     });
   }
   ngOnInit(): void {
+    this.initializeForm();
   }
 
   initializeForm() {
@@ -64,12 +66,21 @@ export class UsuarioFormComponent implements OnInit {
 
     this.formGroup = this.formBuilder.group({
       idUsuario: [(usuario && usuario.id) ? usuario.id : null],
-      titulo: [(usuario && usuario.name) ? usuario.name : '', 
+      nome: [(usuario && usuario.nome) ? usuario.nome : '', 
         Validators.compose([Validators.required, 
                             Validators.minLength(3)])],
-      email: [(usuario && usuario.email) ? usuario.email : null],
-      cpf: [(usuario && usuario.cpf) ? usuario.cpf : null],
-      password: [(usuario && usuario.password) ? usuario.password : null]
+      email: [(usuario && usuario.email) ? usuario.email : '', 
+        Validators.compose([Validators.required, 
+                            Validators.minLength(3)])],
+      perfil: [(usuario && usuario.perfil) ? usuario.perfil : '', 
+        Validators.compose([Validators.required, 
+                            Validators.minLength(3)])],
+      cpf: [(usuario && usuario.cpf) ? usuario.cpf : '', 
+        Validators.compose([Validators.required, 
+                            Validators.minLength(3)])],
+      senha: [(usuario && usuario.senha) ? usuario.senha : '', 
+        Validators.compose([Validators.required, 
+                            Validators.minLength(3)])]
     });
 
   }

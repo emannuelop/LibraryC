@@ -34,20 +34,41 @@ namespace LibraryC.Controllers
         [HttpPost("login")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult Login([FromBody] LoginDTO login)
+        public IActionResult Login( LoginDTO login)
         {
-            var token = _tokenService.GenerateToken(login);
 
             var usuario = _usuarioRepository.SelecionarPorEmail(login.Email);
 
-            if (token == "" || token == null)
+            if (usuario ==  null)
             {
                 return Unauthorized();
             }
 
-            string json = JsonConvert.SerializeObject(token);
+            if (!_tokenService.VerifyPassword(login.Senha, usuario.Senha))
+            {
+                // Retorna o usuário se a senha estiver correta
+                return Unauthorized();
+            }
 
-            return Ok(json);
+            var token = _tokenService.GenerateToken(usuario);
+
+            Response.Headers.Append("Authorization", token);
+
+            return Ok(usuario);
+        }
+
+    }
+
+    public static class HttpResponseExtensions
+    {
+        public static IActionResult WithHeader(this IActionResult result, string header, string value)
+        {
+            if (result is ObjectResult objectResult)
+            {
+                objectResult.WithHeader(header, value);
+            }
+            return result;
         }
     }
+
 }

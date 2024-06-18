@@ -28,7 +28,7 @@ import {
   styleUrl: './emprestimo-list.component.css'
 })
 export class EmprestimoListComponent implements OnInit {
-  displayedColumns: string[] = ['idEmprestimo', 'idCliente', 'idLivro' , 'dataEmprestimo', 'dataPrevistaDevolucao', 'dataDevolucao', 'status'];
+  displayedColumns: string[] = ['idEmprestimo', 'idCliente', 'idLivro' , 'dataEmprestimo', 'dataPrevistaDevolucao', 'dataDevolucao', 'status', 'action'];
   emprestimos: Emprestimo[] = [];
 
   // variaveis de controle de paginacao
@@ -60,7 +60,7 @@ export class EmprestimoListComponent implements OnInit {
 
   delete(id: number): void {
     if (confirm('Tem certeza que deseja excluir este emprestimo?')) {
-      this.emprestimoService.delete(id).subscribe(() => {
+      this.emprestimoService.delete(id).subscribe((data) => {
         this.loadEmprestimos();
       });
     }

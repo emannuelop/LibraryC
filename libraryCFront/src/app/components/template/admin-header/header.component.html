@@ -15,12 +15,9 @@
       
           <div class="login-container" (mouseenter)="showLoginOptions = true" (mouseleave)="showLoginOptions = false">
             <ng-container *ngIf="usuarioLogado; else loginButton">
+              <mat-icon>person</mat-icon>
               <span class="profile-name">{{usuarioLogado.nome}}</span>
               <div *ngIf="showLoginOptions" class="login-options">
-                <button mat-button (click)="dashboard()">
-                  <mat-icon>account_box</mat-icon>
-                  Meus Dados
-                </button>
                 <button mat-button (click)="deslogar()">
                   <mat-icon>exit_to_app</mat-icon>
                   Sair

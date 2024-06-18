@@ -28,7 +28,7 @@ import {
   styleUrl: './cliente-list.component.css'
 })
 export class ClienteListComponent implements OnInit {
-  displayedColumns: string[] = ['idCliente', 'nome', 'email' , 'telefone', 'cpf'];
+  displayedColumns: string[] = ['idCliente', 'nome', 'email' , 'telefone', 'cpf', 'action'];
   clientes: Cliente[] = [];
 
   // variaveis de controle de paginacao
@@ -60,7 +60,7 @@ export class ClienteListComponent implements OnInit {
 
   delete(id: number): void {
     if (confirm('Tem certeza que deseja excluir este cliente?')) {
-      this.clienteService.delete(id).subscribe(() => {
+      this.clienteService.delete(id).subscribe((data) => {
         this.loadClientes();
       });
     }

@@ -28,7 +28,7 @@ import {
   styleUrl: './livro-list.component.css'
 })
 export class LivroListComponent implements OnInit {
-  displayedColumns: string[] = ['idLivro', 'titulo', 'anoPublicacao' , 'idAutor'];
+  displayedColumns: string[] = ['idLivro', 'titulo', 'anoPublicacao' , 'idAutor', 'action'];
   livros: Livro[] = [];
 
   // variaveis de controle de paginacao
@@ -60,7 +60,7 @@ export class LivroListComponent implements OnInit {
 
   delete(id: number): void {
     if (confirm('Tem certeza que deseja excluir este livro?')) {
-      this.livroService.delete(id).subscribe(() => {
+      this.livroService.delete(id).subscribe((data) => {
         this.loadLivros();
       });
     }

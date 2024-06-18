@@ -28,7 +28,7 @@ import {
   styleUrl: './usuario-list.component.css'
 })
 export class UsuarioListComponent implements OnInit {
-  displayedColumns: string[] = ['idUsuario', 'nome', 'email' , 'cpf', 'senha'];
+  displayedColumns: string[] = ['idUsuario', 'nome', 'email' , 'cpf', 'senha','action'];
   usuarios: Usuario[] = [];
 
   // variaveis de controle de paginacao
@@ -60,7 +60,7 @@ export class UsuarioListComponent implements OnInit {
 
   delete(id: number): void {
     if (confirm('Tem certeza que deseja excluir este usuario?')) {
-      this.usuarioService.delete(id).subscribe(() => {
+      this.usuarioService.delete(id).subscribe((data) => {
         this.loadUsuarios();
       });
     }

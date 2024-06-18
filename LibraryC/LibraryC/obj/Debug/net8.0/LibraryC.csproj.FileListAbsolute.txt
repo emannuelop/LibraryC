@@ -768,4 +768,3 @@ C:\Users\emann\Documents\GitHub\LibraryC\LibraryC\LibraryC\obj\Debug\net8.0\refi
 C:\Users\emann\Documents\GitHub\LibraryC\LibraryC\LibraryC\obj\Debug\net8.0\LibraryC.pdb
 C:\Users\emann\Documents\GitHub\LibraryC\LibraryC\LibraryC\obj\Debug\net8.0\LibraryC.genruntimeconfig.cache
 C:\Users\emann\Documents\GitHub\LibraryC\LibraryC\LibraryC\obj\Debug\net8.0\ref\LibraryC.dll
-C:\Users\Erick Santos\Documents\GitHub\Slime\LibraryC\LibraryC\LibraryC\bin\Debug\net8.0\BCrypt.Net-Next.dll

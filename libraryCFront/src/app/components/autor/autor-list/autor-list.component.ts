@@ -28,7 +28,7 @@ import {
   styleUrl: './autor-list.component.css'
 })
 export class AutorListComponent implements OnInit {
-  displayedColumns: string[] = ['idAutor', 'nome'];
+  displayedColumns: string[] = ['idAutor', 'nome', 'action'];
   autores: Autor[] = [];
 
   // variaveis de controle de paginacao
@@ -60,7 +60,7 @@ export class AutorListComponent implements OnInit {
 
   delete(id: number): void {
     if (confirm('Tem certeza que deseja excluir este autores?')) {
-      this.autorService.delete(id).subscribe(() => {
+      this.autorService.delete(id).subscribe((data) => {
         this.loadAutores();
       });
     }

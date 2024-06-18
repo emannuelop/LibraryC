@@ -42,8 +42,9 @@ export class LivroService {
     return this.httpClient.put<Livro>(`${this.baseUrl}/${livro.idLivro}`, obj);
   }
 
-  delete(id: number): Observable<void> { // Alteração aqui
-    return this.httpClient.delete<void>(`${this.baseUrl}/${id}`);
+  delete(id: number): Observable<any> { // Alteração aqui
+    console.log(id);
+    return this.httpClient.delete<any>(`${this.baseUrl}/${id}`);
   }
 
 }

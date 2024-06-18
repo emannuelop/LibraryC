@@ -2,6 +2,7 @@
 using LibraryC.DTOs;
 using LibraryC.Interfaces;
 using LibraryC.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -70,7 +71,7 @@ namespace LibraryC.Controllers
             _livroRepository.Excluir(livro);
             if (await _livroRepository.SaveAllAsync())
             {
-                return Ok("Livro excluido com sucesso");
+                return Ok();
             }
 
             return BadRequest("Erro ao excluir livro");

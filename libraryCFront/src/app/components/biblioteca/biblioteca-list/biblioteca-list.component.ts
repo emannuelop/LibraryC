@@ -28,7 +28,7 @@ import {
   styleUrl: './biblioteca-list.component.css'
 })
 export class BibliotecaListComponent implements OnInit {
-  displayedColumns: string[] = ['idBiblioteca', 'nome', 'endereco'];
+  displayedColumns: string[] = ['idBiblioteca', 'nome', 'endereco', 'action'];
   bibliotecas: Biblioteca[] = [];
 
   // variaveis de controle de paginacao
@@ -60,7 +60,7 @@ export class BibliotecaListComponent implements OnInit {
 
   delete(id: number): void {
     if (confirm('Tem certeza que deseja excluir este biblioteca?')) {
-      this.bibliotecaService.delete(id).subscribe(() => {
+      this.bibliotecaService.delete(id).subscribe((data) => {
         this.loadBibliotecas();
       });
     }

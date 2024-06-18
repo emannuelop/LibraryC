@@ -54,7 +54,7 @@ namespace LibraryC.Controllers
                 _usuarioRepository.Incluir(usuarioUpdate);
                 if (await _usuarioRepository.SaveAllAsync())
                 {
-                    return Ok("Usuario cadastrado com sucesso");
+                    return Ok(usuarioUpdate);
                 }
             }
 
@@ -78,7 +78,7 @@ namespace LibraryC.Controllers
                 _usuarioRepository.Alterar(usuarioUpdate);
                 if (await _usuarioRepository.SaveAllAsync())
                 {
-                    return Ok("Usuario alterado com sucesso");
+                    return Ok(usuarioUpdate);
                 }
             }
 

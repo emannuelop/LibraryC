@@ -79,8 +79,9 @@ export class AutorFormComponent implements OnInit {
       if (autor.idAutor == null) {
         this.autorService.insert(autor).subscribe({
           next: (autorCadastrado) => {
-            console.log(autorCadastrado.IdAutor)
+            console.log(autorCadastrado)
             this.showSnackbarTopPosition('Autor adicionado com sucesso!', 'Fechar');
+            this.router.navigateByUrl('/autores');
           },
           error: (errorResponse) => {      
             console.log('Erro ao incluir' + JSON.stringify(errorResponse));
@@ -91,6 +92,7 @@ export class AutorFormComponent implements OnInit {
           next: (autorAtualizado) => {
             console.log(autorAtualizado.IdAutor)
             this.showSnackbarTopPosition('Autor atualizado com sucesso!', 'Fechar');
+            this.router.navigateByUrl('/autores');
           },
           error: (err) => {
             console.log('Erro ao alterar' + JSON.stringify(err));

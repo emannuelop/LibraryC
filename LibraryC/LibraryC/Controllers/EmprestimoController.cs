@@ -56,7 +56,7 @@ namespace LibraryC.Controllers
             _livroBibliotecaRepository.DiminuirQuantidadeLivro(livroBiblioteca);
             if (await _emprestimoRepository.SaveAllAsync())
             {
-                return Ok("Emprestimo cadastrado com sucesso");
+                return Ok(emprestimo);
             }
 
             return BadRequest("Erro ao salvar emprestimo");
@@ -74,7 +74,7 @@ namespace LibraryC.Controllers
             _emprestimoRepository.Alterar(emprestimoUpdate);
             if (await _emprestimoRepository.SaveAllAsync())
             {
-                return Ok("Emprestimo alterado com sucesso");
+                return Ok(emprestimoUpdate);
             }
 
             return BadRequest("Erro ao alterar emprestimo");

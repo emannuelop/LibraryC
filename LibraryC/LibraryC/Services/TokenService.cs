@@ -52,8 +52,15 @@ namespace LibraryC.Services
 
         public string HashPassword(string password)
         {
+
+            if (password == null)
+            {
+                throw new ArgumentNullException(nameof(password), "A senha não pode ser nula.");
+            }
+
             using (SHA256 sha256 = SHA256.Create())
             {
+
                 // ComputeHash - retorna um array de bytes
                 byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
 
@@ -69,8 +76,15 @@ namespace LibraryC.Services
 
         public bool VerifyPassword(string password, string hashedPassword)
         {
+
             // Hash a senha de entrada e compare-a com a senha já hasheada
             string hashedInput = HashPassword(password);
+
+            if (hashedInput == null)
+            {
+                // Inicializar hashedInput ou lançar uma exceção apropriada
+                throw new InvalidOperationException("hashedInput não foi inicializada.");
+            }
             return hashedInput.Equals(hashedPassword, StringComparison.OrdinalIgnoreCase);
         }
     }

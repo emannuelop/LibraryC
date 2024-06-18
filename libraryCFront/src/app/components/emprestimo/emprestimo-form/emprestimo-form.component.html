@@ -1,0 +1,65 @@
+<div class="page-container">
+    <mat-toolbar color="#fff">
+        <span class="toolbar-title">Cadastro de Livros</span>
+    </mat-toolbar>
+    <div class="form-container">
+        <mat-card>
+            <mat-card-content>
+                <form [formGroup]="formGroup">
+                    <mat-form-field appearance="fill" class="full-width-input">
+                        <mat-label>Cliente</mat-label>
+                        <input matInput type="number" formControlName="idCliente" #inputIdCliente />
+                        <mat-error *ngIf="formGroup.get('idCliente')?.hasError('apiError')">
+                            {{ formGroup.get('idCliente')?.getError('apiError') }}
+                        </mat-error>
+                    </mat-form-field>
+                    <!--begin description-->
+                    <!--end description-->
+                    <!--begin anoPublicacao-->
+                    <mat-form-field appearance="fill" class="full-width-input">
+                        <mat-label>Livro</mat-label>
+                        <input matInput type="number" formControlName="idLivro" #inputIdLivro>
+                        <mat-error *ngIf="formGroup.get('idLivro')?.errors && 
+                                        formGroup.get('idLivro')?.touched">
+                            @if (formGroup.get('idLivro')?.hasError('apiError')) {
+                                <span>{{ formGroup.get('idLivro')?.getError('apiError') }}</span>
+                            }
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="full-width-input">
+                        <mat-label>Data Prevista Devolução</mat-label>
+                        <input matInput type="date" formControlName="dataPrevistaDevolucao">
+                        <mat-error *ngIf="formGroup.get('dataPrevistaDevolucao')?.errors && 
+                                        formGroup.get('dataPrevistaDevolucao')?.touched">
+
+                            @if (formGroup.get('dataPrevistaDevolucao')?.hasError('apiError')) {
+                                <span>{{ formGroup.get('dataPrevistaDevolucao')?.getError('apiError') }}</span>
+                            }
+                        </mat-error>
+                    </mat-form-field>
+                    
+                </form>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button 
+                        color="primary" 
+                        (click)="salvar()">
+                        <!-- [disabled]="formGroup.invalid">  -->
+                    Salvar 
+                </button>
+                <button mat-raised-button 
+                        *ngIf="formGroup?.get('id')?.value"
+                        color="warn" 
+                        (click)="excluir()"
+                        [disabled]="formGroup.invalid"> 
+                    Excluir 
+                </button>
+                <button mat-raised-button  
+                        routerLink="/livros"> 
+                    Cancelar 
+                </button>
+
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

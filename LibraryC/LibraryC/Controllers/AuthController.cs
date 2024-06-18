@@ -41,13 +41,12 @@ namespace LibraryC.Controllers
 
             if (usuario ==  null)
             {
-                return Unauthorized();
+                return NotFound("Usuario ou senha Invalidos");
             }
 
             if (!_tokenService.VerifyPassword(login.Senha, usuario.Senha))
             {
-                // Retorna o usuário se a senha estiver correta
-                return Unauthorized();
+                return NotFound("Usuario ou senha Invalidos");
             }
 
             var token = _tokenService.GenerateToken(usuario);

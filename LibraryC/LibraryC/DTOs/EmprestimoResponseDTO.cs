@@ -1,6 +1,7 @@
 ﻿using LibraryC.Models;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace LibraryC.DTOs
 {
@@ -18,5 +19,8 @@ namespace LibraryC.DTOs
         public DateOnly? DataDevolucao { get; set; }
 
         public DateOnly DataPrevistaDevolucao { get; set; }
+
+        [Required]
+        public string Status { get; set; }
     }
 }

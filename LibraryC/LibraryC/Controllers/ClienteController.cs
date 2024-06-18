@@ -37,7 +37,7 @@ namespace LibraryC.Controllers
             _clienteRepository.Incluir(_mapper.Map<Cliente>(cliente));
             if (await _clienteRepository.SaveAllAsync())
             {
-                return Ok("Cliente cadastrado com sucesso");
+                return Ok(cliente);
             }
 
             return BadRequest("Erro ao salvar cliente");
@@ -56,7 +56,7 @@ namespace LibraryC.Controllers
             _clienteRepository.Alterar(clienteUpdate);
             if (await _clienteRepository.SaveAllAsync())
             {
-                return Ok("Cliente alterado com sucesso");
+                return Ok(clienteUpdate);
             }
 
             return BadRequest("Erro ao alterar cliente");

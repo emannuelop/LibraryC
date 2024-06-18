@@ -16,6 +16,9 @@ import { usuarioResolver } from './components/usuario/resolver/usuario-resolver'
 import { ClienteFormComponent } from './components/cliente/cliente-form/cliente-form.component';
 import { clienteResolver } from './components/cliente/resolver/cliente-resolver';
 import { AdminTemplateComponent } from './components/template/admin-template/admin-template.component';
+import { EmprestimoListComponent } from './components/emprestimo/emprestimo-list/emprestimo-list.component';
+import { EmprestimoFormComponent } from './components/emprestimo/emprestimo-form/emprestimo-form.component';
+import { emprestimoResolver } from './components/emprestimo/resolver/emprestimo-resolver';
 
 export const routes: Routes = [
 
@@ -41,6 +44,9 @@ export const routes: Routes = [
             { path: 'usuarios', component: UsuarioListComponent, title: 'Usuario-List'},
             { path: 'usuarios/new', component: UsuarioFormComponent, title: 'Usuario-Form'},
             { path: 'usuarios/edit/:id', component: UsuarioFormComponent, title: 'Usuario-Form', resolve: {usuario: usuarioResolver}},
+            { path: 'emprestimos', component: EmprestimoListComponent, title: 'Emprestimo-List'},
+            { path: 'emprestimos/new', component: EmprestimoFormComponent, title: 'Emprestimo-Form'},
+            { path: 'emprestimos/edit/:id', component: EmprestimoFormComponent, resolve: {emprestimo: emprestimoResolver}},
             
         ]
     }

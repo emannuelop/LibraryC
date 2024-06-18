@@ -8,24 +8,24 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { Usuario } from '../../../models/usuario.model';
+import { Emprestimo } from '../../../models/emprestimo.model';
 import { HttpErrorResponse } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatIcon } from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { UsuarioService } from '../../../services/usuario.service';
+import { EmprestimoService } from '../../../services/emprestimo.service';
 
 @Component({
-  selector: 'app-usuario-form',
+  selector: 'app-emprestimo-form',
   standalone: true,
   imports: [NgIf, ReactiveFormsModule, MatFormFieldModule,
     MatInputModule, MatButtonModule, MatCardModule, MatToolbarModule, 
     RouterModule, MatSelectModule, CommonModule, MatCheckboxModule, MatIcon],
-  templateUrl: './usuario-form.component.html',
-  styleUrl: './usuario-form.component.css'
+  templateUrl: './emprestimo-form.component.html',
+  styleUrl: './emprestimo-form.component.css'
 })
-export class UsuarioFormComponent implements OnInit {
+export class EmprestimoFormComponent implements OnInit {
 
   formGroup: FormGroup;
 
@@ -36,22 +36,20 @@ export class UsuarioFormComponent implements OnInit {
 
   constructor(
               private formBuilder: FormBuilder,
-              private usuarioService: UsuarioService,
+              private emprestimoService: EmprestimoService,
               private router: Router,
               private activatedRoute: ActivatedRoute,
               private location: Location,
               private snackBar: MatSnackBar
             ) {
 
-    const usuario: Usuario = this.activatedRoute.snapshot.data['usuario'];
+    const emprestimo: Emprestimo = this.activatedRoute.snapshot.data['emprestimo'];
 
     this.formGroup = formBuilder.group({
-      idUsuario: [(usuario && usuario.id) ? usuario.id : null],
-      nome: ['', Validators.required],
-      email: ['', Validators.required],
-      cpf: ['', Validators.required],
-      perfil: ['', Validators.required],
-      senha: ['', Validators.required]
+      idEmprestimo: [(emprestimo && emprestimo.idEmprestimo) ? emprestimo.idEmprestimo : null],
+      idCliente: [null],
+      idLivro: [null],
+      dataPrevistaDevolucao: [null]
     });
   }
   ngOnInit(): void {
@@ -60,27 +58,17 @@ export class UsuarioFormComponent implements OnInit {
 
   initializeForm() {
 
-    const usuario: Usuario = this.activatedRoute.snapshot.data['usuario'];
+    const emprestimo: Emprestimo = this.activatedRoute.snapshot.data['emprestimo'];
+
+    console.log();
 
     // selecionando as associações
 
     this.formGroup = this.formBuilder.group({
-      idUsuario: [(usuario && usuario.id) ? usuario.id : null],
-      nome: [(usuario && usuario.nome) ? usuario.nome : '', 
-        Validators.compose([Validators.required, 
-                            Validators.minLength(3)])],
-      email: [(usuario && usuario.email) ? usuario.email : '', 
-        Validators.compose([Validators.required, 
-                            Validators.minLength(3)])],
-      perfil: [(usuario && usuario.perfil) ? usuario.perfil : '', 
-        Validators.compose([Validators.required, 
-                            Validators.minLength(3)])],
-      cpf: [(usuario && usuario.cpf) ? usuario.cpf : '', 
-        Validators.compose([Validators.required, 
-                            Validators.minLength(3)])],
-      senha: [(usuario && usuario.senha) ? usuario.senha : '', 
-        Validators.compose([Validators.required, 
-                            Validators.minLength(3)])]
+      idEmprestimo: [(emprestimo && emprestimo.idEmprestimo) ? emprestimo.idEmprestimo : null],
+      idCliente: [(emprestimo && emprestimo.idCliente) ? emprestimo.idCliente : null],
+      idLivro: [(emprestimo && emprestimo.idLivro) ? emprestimo.idLivro : null],
+      dataPrevistaDevolucao: [(emprestimo && emprestimo.dataPrevistaDevolucao) ? emprestimo.dataPrevistaDevolucao : null]
     });
 
   }
@@ -89,25 +77,25 @@ export class UsuarioFormComponent implements OnInit {
     console.log(this.formGroup);
     // marca todos os campos do formulario como 'touched'
     if (this.formGroup.valid) {
-      const usuario = this.formGroup.value;
-      console.log(usuario);
-      if (usuario.id == null) {
-        this.usuarioService.insert(usuario).subscribe({
-          next: (usuarioCadastrado) => {
-            console.log(usuarioCadastrado)
-            this.showSnackbarTopPosition('Usuario adicionado com sucesso!', 'Fechar');
-            this.router.navigateByUrl('/usuarios');
+      const emprestimo = this.formGroup.value;
+      console.log(emprestimo);
+      if (emprestimo.idEmprestimo == null) {
+        this.emprestimoService.insert(emprestimo).subscribe({
+          next: (emprestimoCadastrado) => {
+            console.log(emprestimoCadastrado)
+            this.showSnackbarTopPosition('Emprestimo adicionado com sucesso!', 'Fechar');
+            this.router.navigateByUrl('/emprestimos');
           },
           error: (errorResponse) => {      
             console.log('Erro ao incluir' + JSON.stringify(errorResponse));
           }
         });
       } else {
-        this.usuarioService.update(usuario).subscribe({
-          next: (usuarioAtualizado) => {
-            console.log(usuarioAtualizado.id)
-            this.showSnackbarTopPosition('Usuario atualizado com sucesso!', 'Fechar');
-            this.router.navigateByUrl('/usuarios');
+        this.emprestimoService.update(emprestimo).subscribe({
+          next: (emprestimoAtualizado) => {
+            console.log(emprestimoAtualizado.idEmprestimo)
+            this.showSnackbarTopPosition('Emprestimo atualizado com sucesso!', 'Fechar');
+            this.router.navigateByUrl('/emprestimos');
           },
           error: (err) => {
             console.log('Erro ao alterar' + JSON.stringify(err));
@@ -141,16 +129,16 @@ export class UsuarioFormComponent implements OnInit {
 
   excluir() {
     if (this.formGroup.valid) {
-      const usuario = this.formGroup.value;
-      if (usuario.id != null) {
-        this.usuarioService.delete(usuario.id).subscribe({
+      const emprestimo = this.formGroup.value;
+      if (emprestimo.id != null) {
+        this.emprestimoService.delete(emprestimo.id).subscribe({
           next: () => {
-            this.router.navigateByUrl('/usuarios');
-            this.showSnackbarTopPosition('Usuario deletado com sucesso!', 'Fechar');
+            this.router.navigateByUrl('/admin/emprestimos');
+            this.showSnackbarTopPosition('Emprestimo deletado com sucesso!', 'Fechar');
           },
           error: (err) => {
             console.log('Erro ao Excluir' + JSON.stringify(err));
-            this.showSnackbarTopPosition('Erro ao deletar o Usuario!', 'Fechar');
+            this.showSnackbarTopPosition('Erro ao deletar o Emprestimo!', 'Fechar');
           }
         });
       }

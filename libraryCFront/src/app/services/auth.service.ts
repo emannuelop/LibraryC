@@ -39,7 +39,7 @@ export class AuthService {
   login(login: string, password: string): Observable<HttpResponse<any>> {
     const params = {
       email: login,
-      password: password
+      senha: password
     }
 
     const sla = this.http.post<string>(`${this.baseURL}/login`, params);
@@ -49,6 +49,7 @@ export class AuthService {
       tap((res: HttpResponse<any>) => {
         const authToken = res.headers.get('authorization') ?? '';
         console.log('Authorization Header:', authToken);
+        this.setToken(authToken);
 
         if (authToken) {
           const usuarioLogado = res.body;

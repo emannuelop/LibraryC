@@ -84,8 +84,9 @@ export class LivroFormComponent implements OnInit {
       if (livro.idLivro == null) {
         this.livroService.insert(livro).subscribe({
           next: (livroCadastrado) => {
-            console.log(livroCadastrado.idLivro)
+            console.log(livroCadastrado)
             this.showSnackbarTopPosition('Livro adicionado com sucesso!', 'Fechar');
+            this.router.navigateByUrl('/livros');
           },
           error: (errorResponse) => {      
             console.log('Erro ao incluir' + JSON.stringify(errorResponse));
@@ -96,6 +97,7 @@ export class LivroFormComponent implements OnInit {
           next: (livroAtualizado) => {
             console.log(livroAtualizado.idLivro)
             this.showSnackbarTopPosition('Livro atualizado com sucesso!', 'Fechar');
+            this.router.navigateByUrl('/livros');
           },
           error: (err) => {
             console.log('Erro ao alterar' + JSON.stringify(err));

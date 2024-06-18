@@ -47,7 +47,7 @@ namespace LibraryC.Controllers
             _multaRepository.Incluir(multaPost);
             if (await _multaRepository.SaveAllAsync())
             {
-                return Ok("Multa cadastrado com sucesso");
+                return Ok(multaPost);
             }
 
             return BadRequest("Erro ao salvar multa");
@@ -65,7 +65,7 @@ namespace LibraryC.Controllers
             _multaRepository.Alterar(multaUpdate);
             if (await _multaRepository.SaveAllAsync())
             {
-                return Ok("Multa alterado com sucesso");
+                return Ok(multaUpdate);
             }
 
             return BadRequest("Erro ao alterar multa");

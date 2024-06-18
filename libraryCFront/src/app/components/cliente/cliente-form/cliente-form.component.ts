@@ -92,6 +92,7 @@ export class ClienteFormComponent implements OnInit {
           next: (clienteCadastrado) => {
             console.log(clienteCadastrado.idCliente)
             this.showSnackbarTopPosition('Cliente adicionado com sucesso!', 'Fechar');
+            this.router.navigateByUrl('/clientes');
           },
           error: (errorResponse) => {      
             console.log('Erro ao incluir' + JSON.stringify(errorResponse));
@@ -100,8 +101,9 @@ export class ClienteFormComponent implements OnInit {
       } else {
         this.clienteService.update(cliente).subscribe({
           next: (clienteAtualizado) => {
-            console.log(clienteAtualizado.idCliente)
+            console.log(clienteAtualizado)
             this.showSnackbarTopPosition('Cliente atualizado com sucesso!', 'Fechar');
+            this.router.navigateByUrl('/clientes');
           },
           error: (err) => {
             console.log('Erro ao alterar' + JSON.stringify(err));

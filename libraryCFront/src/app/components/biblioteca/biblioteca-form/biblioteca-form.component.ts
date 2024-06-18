@@ -80,8 +80,9 @@ export class BibliotecaFormComponent implements OnInit {
       if (biblioteca.idBiblioteca == null) {
         this.bibliotecaService.insert(biblioteca).subscribe({
           next: (bibliotecaCadastrado) => {
-            console.log(bibliotecaCadastrado.idBiblioteca)
+            console.log(bibliotecaCadastrado)
             this.showSnackbarTopPosition('Biblioteca adicionado com sucesso!', 'Fechar');
+            this.router.navigateByUrl('/bibliotecas');
           },
           error: (errorResponse) => {      
             console.log('Erro ao incluir' + JSON.stringify(errorResponse));
@@ -92,6 +93,7 @@ export class BibliotecaFormComponent implements OnInit {
           next: (bibliotecaAtualizado) => {
             console.log(bibliotecaAtualizado.idBiblioteca)
             this.showSnackbarTopPosition('Biblioteca atualizado com sucesso!', 'Fechar');
+            this.router.navigateByUrl('/bibliotecas');
           },
           error: (err) => {
             console.log('Erro ao alterar' + JSON.stringify(err));

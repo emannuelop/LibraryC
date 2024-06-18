@@ -37,7 +37,7 @@ namespace LibraryC.Controllers
             _livrobibliotecaRepository.Incluir(_mapper.Map<LivroBiblioteca>(livrobiblioteca));
             if (await _livrobibliotecaRepository.SaveAllAsync())
             {
-                return Ok("LivroBiblioteca cadastrado com sucesso");
+                return Ok(livrobiblioteca);
             }
 
             return BadRequest("Erro ao salvar livrobiblioteca");
@@ -55,7 +55,7 @@ namespace LibraryC.Controllers
             _livrobibliotecaRepository.Alterar(livrobibliotecaUpdate);
             if (await _livrobibliotecaRepository.SaveAllAsync())
             {
-                return Ok("LivroBiblioteca alterado com sucesso");
+                return Ok(livrobibliotecaUpdate);
             }
 
             return BadRequest("Erro ao alterar livrobiblioteca");

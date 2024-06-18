@@ -39,7 +39,7 @@ namespace LibraryC.Controllers
             _autorRepository.Incluir(_mapper.Map<Autor>(autor));
             if(await _autorRepository.SaveAllAsync())
             {
-                return Ok("Autor cadastrado com sucesso");
+                return Ok(autor);
             }
 
             return BadRequest("Erro ao salvar autor");
@@ -55,7 +55,7 @@ namespace LibraryC.Controllers
             _autorRepository.Alterar(autorUpdate);
             if (await _autorRepository.SaveAllAsync())
             {
-                return Ok("Autor alterado com sucesso");
+                return Ok(autorUpdate);
             }
 
             return BadRequest("Erro ao alterar autor");

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2Yko90ZTmb5Vjo3heFciegIpeH66PSAB056GCQVGFHFAZDURVp6huYVw/53OcH4mfQxv4gbvEsw7EXAmmNfrsQ==",
+  "dgSpecHash": "Os7oXxBzvDouwNpOoRIVca3Oa1gM7hARM0P+z7cKU/2jayUG2lgeEKyTWw6PcweKvkKFpKkOJwSLIkhQXPo0iw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\LibraryC.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,6 @@
     "C:\\Users\\Erick Santos\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Erick Santos\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Erick Santos\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
-    "C:\\Users\\Erick Santos\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Erick Santos\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Erick Santos\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Erick Santos\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

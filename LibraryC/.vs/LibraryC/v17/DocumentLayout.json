@@ -3,8 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\dtos\\livrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\dtos\\livrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\dtos\\livroresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\dtos\\livroresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\controllers\\livrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\controllers\\livrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\controllers\\autorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\controllers\\autorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Migrations\\20240619021441_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LibraryC\\Migrations\\20240619021441_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\controllers\\emprestimocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\controllers\\emprestimocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\mappings\\entitiestodtomappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\mappings\\entitiestodtomappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\models\\libraryccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\models\\libraryccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,32 +55,8 @@
       "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\controllers\\multacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\controllers\\livrobibliotecacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\controllers\\livrobibliotecacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\controllers\\emprestimocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\controllers\\emprestimocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\controllers\\bibliotecacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\controllers\\bibliotecacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\controllers\\autorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\controllers\\autorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,10 +71,6 @@
       "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\dtos\\emprestimoresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\models\\emprestimo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\models\\emprestimo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\dtos\\emprestimodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\dtos\\emprestimodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -67,56 +79,16 @@
       "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\dtos\\livroresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\dtos\\livroresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\dtos\\livrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\dtos\\livrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\dtos\\autorresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\dtos\\autorresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\dtos\\livrobibliotecadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\dtos\\livrobibliotecadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\models\\livrobiblioteca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\models\\livrobiblioteca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\repositories\\livrobibliotecarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\repositories\\livrobibliotecarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\models\\libraryccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\models\\libraryccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\mappings\\entitiestodtomappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\mappings\\entitiestodtomappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\dtos\\bibliotecaresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\dtos\\bibliotecaresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\dtos\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -125,14 +97,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\dtos\\clienteresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\dtos\\clienteresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\interfaces\\ilivrobibliotecarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\interfaces\\ilivrobibliotecarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\models\\multa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\models\\multa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\dtos\\multaresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -145,10 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\dtos\\usuarioresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\dtos\\usuarioresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\repositories\\bibliotecarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\repositories\\bibliotecarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\repositories\\autorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -175,14 +135,6 @@
       "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\interfaces\\iemprestimorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\dtos\\bibliotecadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\dtos\\bibliotecadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\interfaces\\ibibliotecarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\interfaces\\ibibliotecarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\repositories\\livrorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\repositories\\livrorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -205,10 +157,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\libraryc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\libraryc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|c:\\users\\erick santos\\documents\\github\\slime\\libraryc\\libraryc\\libraryc\\migrations\\20240615124039_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72F41AD4-3055-41F1-A000-032D78EE065D}|LibraryC\\LibraryC.csproj|solutionrelative:libraryc\\migrations\\20240615124039_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -218,102 +166,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BibliotecaController.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\BibliotecaController.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Controllers\\BibliotecaController.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\BibliotecaController.cs",
-              "RelativeToolTip": "LibraryC\\Controllers\\BibliotecaController.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAiwCcAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T00:50:00.615Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ClienteController.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\ClienteController.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Controllers\\ClienteController.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\ClienteController.cs",
-              "RelativeToolTip": "LibraryC\\Controllers\\ClienteController.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAiwCYAAAANAAAA",
+              "Title": "20240619021441_Initial.cs",
+              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Migrations\\20240619021441_Initial.cs",
+              "RelativeDocumentMoniker": "LibraryC\\Migrations\\20240619021441_Initial.cs",
+              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Migrations\\20240619021441_Initial.cs",
+              "RelativeToolTip": "LibraryC\\Migrations\\20240619021441_Initial.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T00:12:54.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmprestimoController.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\EmprestimoController.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Controllers\\EmprestimoController.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\EmprestimoController.cs",
-              "RelativeToolTip": "LibraryC\\Controllers\\EmprestimoController.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAADoAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T01:04:59.176Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LivroBibliotecaController.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\LivroBibliotecaController.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Controllers\\LivroBibliotecaController.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\LivroBibliotecaController.cs",
-              "RelativeToolTip": "LibraryC\\Controllers\\LivroBibliotecaController.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAgwCcAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T01:21:32.525Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LivroController.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\LivroController.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Controllers\\LivroController.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\LivroController.cs",
-              "RelativeToolTip": "LibraryC\\Controllers\\LivroController.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAqwEkAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T00:23:30.357Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MultaController.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\MultaController.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Controllers\\MultaController.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\MultaController.cs",
-              "RelativeToolTip": "LibraryC\\Controllers\\MultaController.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAAADEAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T01:13:21.339Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "LibraryC\\Controllers\\UsuarioController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAAB0AAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T20:54:30.633Z",
+              "WhenOpened": "2024-06-19T02:14:41.471Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "EntitiesToDTOMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Mappings\\EntitiesToDTOMappingProfile.cs",
+              "RelativeDocumentMoniker": "LibraryC\\Mappings\\EntitiesToDTOMappingProfile.cs",
+              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Mappings\\EntitiesToDTOMappingProfile.cs",
+              "RelativeToolTip": "LibraryC\\Mappings\\EntitiesToDTOMappingProfile.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAiwBgAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T20:56:54.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "AutorController.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\AutorController.cs",
               "RelativeDocumentMoniker": "LibraryC\\Controllers\\AutorController.cs",
@@ -326,7 +209,137 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "LibraryC\\Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "LibraryC\\Controllers\\ClienteController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAiwCYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T00:12:54.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LivroController.cs",
+              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\LivroController.cs",
+              "RelativeDocumentMoniker": "LibraryC\\Controllers\\LivroController.cs",
+              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\LivroController.cs",
+              "RelativeToolTip": "LibraryC\\Controllers\\LivroController.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAqwDYAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T00:23:30.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LivroResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\LivroResponseDTO.cs",
+              "RelativeDocumentMoniker": "LibraryC\\DTOs\\LivroResponseDTO.cs",
+              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\LivroResponseDTO.cs",
+              "RelativeToolTip": "LibraryC\\DTOs\\LivroResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T00:21:05.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LivroDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\LivroDTO.cs",
+              "RelativeDocumentMoniker": "LibraryC\\DTOs\\LivroDTO.cs",
+              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\LivroDTO.cs",
+              "RelativeToolTip": "LibraryC\\DTOs\\LivroDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T00:22:47.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Program.cs",
+              "RelativeDocumentMoniker": "LibraryC\\Program.cs",
+              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Program.cs",
+              "RelativeToolTip": "LibraryC\\Program.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAAAFUAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T16:56:15.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\appsettings.json",
+              "RelativeDocumentMoniker": "LibraryC\\appsettings.json",
+              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\appsettings.json",
+              "RelativeToolTip": "LibraryC\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-10T17:01:39.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LibrarycContext.cs",
+              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Models\\LibrarycContext.cs",
+              "RelativeDocumentMoniker": "LibraryC\\Models\\LibrarycContext.cs",
+              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Models\\LibrarycContext.cs",
+              "RelativeToolTip": "LibraryC\\Models\\LibrarycContext.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T02:02:11.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MultaController.cs",
+              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\MultaController.cs",
+              "RelativeDocumentMoniker": "LibraryC\\Controllers\\MultaController.cs",
+              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\MultaController.cs",
+              "RelativeToolTip": "LibraryC\\Controllers\\MultaController.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAIBJwDEAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T01:13:21.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmprestimoController.cs",
+              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\EmprestimoController.cs",
+              "RelativeDocumentMoniker": "LibraryC\\Controllers\\EmprestimoController.cs",
+              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\EmprestimoController.cs",
+              "RelativeToolTip": "LibraryC\\Controllers\\EmprestimoController.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAABgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T01:04:59.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "LibraryC\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "LibraryC\\Controllers\\UsuarioController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAIBJwB0AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T20:54:30.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "UsuarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Repositories\\UsuarioRepository.cs",
               "RelativeDocumentMoniker": "LibraryC\\Repositories\\UsuarioRepository.cs",
@@ -339,59 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Program.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Program.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Program.cs",
-              "RelativeToolTip": "LibraryC\\Program.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAAAGIAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T16:56:15.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "LivroBiblioteca.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Models\\LivroBiblioteca.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Models\\LivroBiblioteca.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Models\\LivroBiblioteca.cs",
-              "RelativeToolTip": "LibraryC\\Models\\LivroBiblioteca.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAIwBYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T14:37:06.533Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "LivroDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\LivroDTO.cs",
-              "RelativeDocumentMoniker": "LibraryC\\DTOs\\LivroDTO.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\LivroDTO.cs",
-              "RelativeToolTip": "LibraryC\\DTOs\\LivroDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T00:22:47.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Emprestimo.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Models\\Emprestimo.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Models\\Emprestimo.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Models\\Emprestimo.cs",
-              "RelativeToolTip": "LibraryC\\Models\\Emprestimo.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAxwCQAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T12:35:02.381Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "EmprestimoDTO.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\EmprestimoDTO.cs",
               "RelativeDocumentMoniker": "LibraryC\\DTOs\\EmprestimoDTO.cs",
@@ -404,7 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "EmprestimoResponseDTO.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\EmprestimoResponseDTO.cs",
               "RelativeDocumentMoniker": "LibraryC\\DTOs\\EmprestimoResponseDTO.cs",
@@ -417,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "TokenService.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Services\\TokenService.cs",
               "RelativeDocumentMoniker": "LibraryC\\Services\\TokenService.cs",
@@ -430,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "ITokenService.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Interfaces\\ITokenService.cs",
               "RelativeDocumentMoniker": "LibraryC\\Interfaces\\ITokenService.cs",
@@ -443,46 +404,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "LibraryC\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Controllers\\AuthController.cs",
               "RelativeToolTip": "LibraryC\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAqwDcAAAAfAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAA6wDcAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T21:19:31.508Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Models\\Usuario.cs",
-              "RelativeToolTip": "LibraryC\\Models\\Usuario.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCcAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T11:20:20.17Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "LibrarycContext.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Models\\LibrarycContext.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Models\\LibrarycContext.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Models\\LibrarycContext.cs",
-              "RelativeToolTip": "LibraryC\\Models\\LibrarycContext.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAIBZwEoAAABZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T12:30:17.392Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 21,
               "Title": "ClienteRepository.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Repositories\\ClienteRepository.cs",
               "RelativeDocumentMoniker": "LibraryC\\Repositories\\ClienteRepository.cs",
@@ -496,58 +431,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\appsettings.json",
-              "RelativeDocumentMoniker": "LibraryC\\appsettings.json",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\appsettings.json",
-              "RelativeToolTip": "LibraryC\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-10T17:01:39.4Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "LivroResponseDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\LivroResponseDTO.cs",
-              "RelativeDocumentMoniker": "LibraryC\\DTOs\\LivroResponseDTO.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\LivroResponseDTO.cs",
-              "RelativeToolTip": "LibraryC\\DTOs\\LivroResponseDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T00:21:05.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "LivroBibliotecaDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\LivroBibliotecaDTO.cs",
-              "RelativeDocumentMoniker": "LibraryC\\DTOs\\LivroBibliotecaDTO.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\LivroBibliotecaDTO.cs",
-              "RelativeToolTip": "LibraryC\\DTOs\\LivroBibliotecaDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T01:23:33.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "LivroBibliotecaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Repositories\\LivroBibliotecaRepository.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Repositories\\LivroBibliotecaRepository.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Repositories\\LivroBibliotecaRepository.cs",
-              "RelativeToolTip": "LibraryC\\Repositories\\LivroBibliotecaRepository.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAowCsAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T01:19:10.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "UsuarioDTO.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\UsuarioDTO.cs",
               "RelativeDocumentMoniker": "LibraryC\\DTOs\\UsuarioDTO.cs",
@@ -560,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "AutorResponseDTO.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\AutorResponseDTO.cs",
               "RelativeDocumentMoniker": "LibraryC\\DTOs\\AutorResponseDTO.cs",
@@ -573,33 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "EntitiesToDTOMappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Mappings\\EntitiesToDTOMappingProfile.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Mappings\\EntitiesToDTOMappingProfile.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Mappings\\EntitiesToDTOMappingProfile.cs",
-              "RelativeToolTip": "LibraryC\\Mappings\\EntitiesToDTOMappingProfile.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwCUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T20:56:54.112Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "BibliotecaResponseDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\BibliotecaResponseDTO.cs",
-              "RelativeDocumentMoniker": "LibraryC\\DTOs\\BibliotecaResponseDTO.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\BibliotecaResponseDTO.cs",
-              "RelativeToolTip": "LibraryC\\DTOs\\BibliotecaResponseDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T00:46:47.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 22,
               "Title": "ClienteDTO.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\ClienteDTO.cs",
               "RelativeDocumentMoniker": "LibraryC\\DTOs\\ClienteDTO.cs",
@@ -612,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 23,
               "Title": "ClienteResponseDTO.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\ClienteResponseDTO.cs",
               "RelativeDocumentMoniker": "LibraryC\\DTOs\\ClienteResponseDTO.cs",
@@ -625,33 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "ILivroBibliotecaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Interfaces\\ILivroBibliotecaRepository.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Interfaces\\ILivroBibliotecaRepository.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Interfaces\\ILivroBibliotecaRepository.cs",
-              "RelativeToolTip": "LibraryC\\Interfaces\\ILivroBibliotecaRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T01:17:59.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Multa.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Models\\Multa.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Models\\Multa.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Models\\Multa.cs",
-              "RelativeToolTip": "LibraryC\\Models\\Multa.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAIBZwCQAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T12:30:31.693Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 26,
               "Title": "UsuarioResponseDTO.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\UsuarioResponseDTO.cs",
               "RelativeDocumentMoniker": "LibraryC\\DTOs\\UsuarioResponseDTO.cs",
@@ -664,7 +495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 24,
               "Title": "MultaResponseDTO.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\MultaResponseDTO.cs",
               "RelativeDocumentMoniker": "LibraryC\\DTOs\\MultaResponseDTO.cs",
@@ -677,7 +508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 25,
               "Title": "MultaDTO.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\MultaDTO.cs",
               "RelativeDocumentMoniker": "LibraryC\\DTOs\\MultaDTO.cs",
@@ -690,20 +521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "20240615124039_Initial.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Migrations\\20240615124039_Initial.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Migrations\\20240615124039_Initial.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Migrations\\20240615124039_Initial.cs",
-              "RelativeToolTip": "LibraryC\\Migrations\\20240615124039_Initial.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T12:40:40.103Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 27,
               "Title": "AutorRepository.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Repositories\\AutorRepository.cs",
               "RelativeDocumentMoniker": "LibraryC\\Repositories\\AutorRepository.cs",
@@ -716,20 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "BibliotecaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Repositories\\BibliotecaRepository.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Repositories\\BibliotecaRepository.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Repositories\\BibliotecaRepository.cs",
-              "RelativeToolTip": "LibraryC\\Repositories\\BibliotecaRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T00:44:59.365Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 28,
               "Title": "IAutorRepository.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Interfaces\\IAutorRepository.cs",
               "RelativeDocumentMoniker": "LibraryC\\Interfaces\\IAutorRepository.cs",
@@ -742,7 +547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 29,
               "Title": "MultaRepository.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Repositories\\MultaRepository.cs",
               "RelativeDocumentMoniker": "LibraryC\\Repositories\\MultaRepository.cs",
@@ -755,7 +560,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 30,
               "Title": "IMultaRepository.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Interfaces\\IMultaRepository.cs",
               "RelativeDocumentMoniker": "LibraryC\\Interfaces\\IMultaRepository.cs",
@@ -768,7 +573,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 31,
               "Title": "EmprestimoRepository.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Repositories\\EmprestimoRepository.cs",
               "RelativeDocumentMoniker": "LibraryC\\Repositories\\EmprestimoRepository.cs",
@@ -781,7 +586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 32,
               "Title": "IEmprestimoRepository.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Interfaces\\IEmprestimoRepository.cs",
               "RelativeDocumentMoniker": "LibraryC\\Interfaces\\IEmprestimoRepository.cs",
@@ -794,33 +599,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "BibliotecaDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\BibliotecaDTO.cs",
-              "RelativeDocumentMoniker": "LibraryC\\DTOs\\BibliotecaDTO.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\BibliotecaDTO.cs",
-              "RelativeToolTip": "LibraryC\\DTOs\\BibliotecaDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T00:49:11.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "IBibliotecaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Interfaces\\IBibliotecaRepository.cs",
-              "RelativeDocumentMoniker": "LibraryC\\Interfaces\\IBibliotecaRepository.cs",
-              "ToolTip": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Interfaces\\IBibliotecaRepository.cs",
-              "RelativeToolTip": "LibraryC\\Interfaces\\IBibliotecaRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T00:44:12.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 33,
               "Title": "LivroRepository.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Repositories\\LivroRepository.cs",
               "RelativeDocumentMoniker": "LibraryC\\Repositories\\LivroRepository.cs",
@@ -833,7 +612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 34,
               "Title": "ILivroRepository.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Interfaces\\ILivroRepository.cs",
               "RelativeDocumentMoniker": "LibraryC\\Interfaces\\ILivroRepository.cs",
@@ -846,7 +625,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 35,
               "Title": "IClienteRepository.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Interfaces\\IClienteRepository.cs",
               "RelativeDocumentMoniker": "LibraryC\\Interfaces\\IClienteRepository.cs",
@@ -859,7 +638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 36,
               "Title": "IUsuarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\Interfaces\\IUsuarioRepository.cs",
               "RelativeDocumentMoniker": "LibraryC\\Interfaces\\IUsuarioRepository.cs",
@@ -872,7 +651,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 37,
               "Title": "LoginDTO.cs",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\DTOs\\LoginDTO.cs",
               "RelativeDocumentMoniker": "LibraryC\\DTOs\\LoginDTO.cs",
@@ -885,7 +664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 38,
               "Title": "LibraryC.csproj",
               "DocumentMoniker": "C:\\Users\\Erick Santos\\Documents\\GitHub\\Slime\\LibraryC\\LibraryC\\LibraryC\\LibraryC.csproj",
               "RelativeDocumentMoniker": "LibraryC\\LibraryC.csproj",

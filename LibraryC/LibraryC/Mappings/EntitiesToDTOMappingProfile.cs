@@ -24,10 +24,6 @@ namespace LibraryC.Mappings
 
             CreateMap<Livro, LivroDTO>().ReverseMap();
 
-            CreateMap<Biblioteca, BibliotecaResponseDTO>().ReverseMap();
-
-            CreateMap<Biblioteca, BibliotecaDTO>().ReverseMap();
-
             CreateMap<Multa, MultaResponseDTO>().ReverseMap();
 
             CreateMap<Multa, MultaDTO>().ReverseMap();
@@ -35,10 +31,6 @@ namespace LibraryC.Mappings
             CreateMap<Emprestimo, EmprestimoResponseDTO>().ReverseMap();
 
             CreateMap<Emprestimo, EmprestimoDTO>().ReverseMap();
-
-            CreateMap<LivroBiblioteca, LivroBibliotecaResponseDTO>().ReverseMap();
-
-            CreateMap<LivroBiblioteca, LivroBibliotecaDTO>().ReverseMap();
         }
     }
 }

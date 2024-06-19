@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LibraryC.Migrations
 {
     [DbContext(typeof(LibrarycContext))]
-    [Migration("20240615124039_Initial")]
+    [Migration("20240619021441_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -42,38 +42,9 @@ namespace LibraryC.Migrations
                         .HasColumnName("nome");
 
                     b.HasKey("IdAutor")
-                        .HasName("PK__autor__5FC3872DC301C732");
+                        .HasName("PK__autor__5FC3872D8D84111E");
 
                     b.ToTable("autor");
-                });
-
-            modelBuilder.Entity("LibraryC.Models.Biblioteca", b =>
-                {
-                    b.Property<int>("IdBiblioteca")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("id_biblioteca");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdBiblioteca"));
-
-                    b.Property<string>("Endereco")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(255)")
-                        .HasColumnName("endereco");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(100)")
-                        .HasColumnName("nome");
-
-                    b.HasKey("IdBiblioteca")
-                        .HasName("PK__bibliote__1EEBBDFE281AC4B8");
-
-                    b.ToTable("biblioteca");
                 });
 
             modelBuilder.Entity("LibraryC.Models.Cliente", b =>
@@ -112,12 +83,12 @@ namespace LibraryC.Migrations
                         .HasColumnName("telefone");
 
                     b.HasKey("IdCliente")
-                        .HasName("PK__cliente__677F38F5CA8CA5A3");
+                        .HasName("PK__cliente__677F38F5ADCBD31A");
 
-                    b.HasIndex(new[] { "Email" }, "UQ__cliente__AB6E616407A7B8AF")
+                    b.HasIndex(new[] { "Email" }, "UQ__cliente__AB6E6164D20DC6AE")
                         .IsUnique();
 
-                    b.HasIndex(new[] { "Cpf" }, "UQ__cliente__D836E71F90420DBC")
+                    b.HasIndex(new[] { "Cpf" }, "UQ__cliente__D836E71F47A837ED")
                         .IsUnique()
                         .HasFilter("[cpf] IS NOT NULL");
 
@@ -145,10 +116,6 @@ namespace LibraryC.Migrations
                         .HasColumnType("date")
                         .HasColumnName("data_prevista_devolucao");
 
-                    b.Property<int?>("IdBiblioteca")
-                        .HasColumnType("int")
-                        .HasColumnName("id_biblioteca");
-
                     b.Property<int>("IdCliente")
                         .HasColumnType("int")
                         .HasColumnName("id_cliente");
@@ -165,9 +132,7 @@ namespace LibraryC.Migrations
                         .HasColumnName("status");
 
                     b.HasKey("IdEmprestimo")
-                        .HasName("PK__empresti__45FD187E42C5A0B8");
-
-                    b.HasIndex("IdBiblioteca");
+                        .HasName("PK__empresti__45FD187EAB0C3519");
 
                     b.HasIndex("IdCliente");
 
@@ -193,6 +158,10 @@ namespace LibraryC.Migrations
                         .HasColumnType("int")
                         .HasColumnName("id_autor");
 
+                    b.Property<int>("Quantidade")
+                        .HasColumnType("int")
+                        .HasColumnName("quantidade");
+
                     b.Property<string>("Titulo")
                         .IsRequired()
                         .HasMaxLength(255)
@@ -201,42 +170,11 @@ namespace LibraryC.Migrations
                         .HasColumnName("titulo");
 
                     b.HasKey("IdLivro")
-                        .HasName("PK__livro__C252147DF73055FC");
+                        .HasName("PK__livro__C252147D34AEE0DA");
 
                     b.HasIndex("IdAutor");
 
                     b.ToTable("livro");
-                });
-
-            modelBuilder.Entity("LibraryC.Models.LivroBiblioteca", b =>
-                {
-                    b.Property<int>("IdLivroBiblioteca")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("id_livro_biblioteca");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdLivroBiblioteca"));
-
-                    b.Property<int?>("IdBiblioteca")
-                        .HasColumnType("int")
-                        .HasColumnName("id_biblioteca");
-
-                    b.Property<int?>("IdLivro")
-                        .HasColumnType("int")
-                        .HasColumnName("id_livro");
-
-                    b.Property<int>("Quantidade")
-                        .HasColumnType("int")
-                        .HasColumnName("quantidade");
-
-                    b.HasKey("IdLivroBiblioteca")
-                        .HasName("PK__livro_bi__C7822DFEA5F88D41");
-
-                    b.HasIndex("IdBiblioteca");
-
-                    b.HasIndex("IdLivro");
-
-                    b.ToTable("livro_biblioteca");
                 });
 
             modelBuilder.Entity("LibraryC.Models.Multa", b =>
@@ -275,7 +213,7 @@ namespace LibraryC.Migrations
                         .HasColumnName("valor");
 
                     b.HasKey("IdMulta")
-                        .HasName("PK__multa__295650BB36BC9AE5");
+                        .HasName("PK__multa__295650BB02D87DB9");
 
                     b.HasIndex("IdCliente");
 
@@ -304,10 +242,6 @@ namespace LibraryC.Migrations
                         .HasColumnType("varchar(100)")
                         .HasColumnName("email");
 
-                    b.Property<int?>("IdBiblioteca")
-                        .HasColumnType("int")
-                        .HasColumnName("id_biblioteca");
-
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -330,14 +264,12 @@ namespace LibraryC.Migrations
                         .HasColumnName("senha");
 
                     b.HasKey("IdUsuario")
-                        .HasName("PK__usuario__4E3E04AD8C3DEA94");
+                        .HasName("PK__usuario__4E3E04ADBB2183BB");
 
-                    b.HasIndex("IdBiblioteca");
-
-                    b.HasIndex(new[] { "Email" }, "UQ__usuario__AB6E6164A876FDE6")
+                    b.HasIndex(new[] { "Email" }, "UQ__usuario__AB6E6164C431BFFF")
                         .IsUnique();
 
-                    b.HasIndex(new[] { "Cpf" }, "UQ__usuario__D836E71F932DAC61")
+                    b.HasIndex(new[] { "Cpf" }, "UQ__usuario__D836E71F34E4F432")
                         .IsUnique()
                         .HasFilter("[cpf] IS NOT NULL");
 
@@ -346,24 +278,17 @@ namespace LibraryC.Migrations
 
             modelBuilder.Entity("LibraryC.Models.Emprestimo", b =>
                 {
-                    b.HasOne("LibraryC.Models.Biblioteca", "IdBibliotecaNavigation")
-                        .WithMany("Emprestimo")
-                        .HasForeignKey("IdBiblioteca")
-                        .HasConstraintName("FK__emprestim__id_bi__4D94879B");
-
                     b.HasOne("LibraryC.Models.Cliente", "IdClienteNavigation")
                         .WithMany("Emprestimo")
                         .HasForeignKey("IdCliente")
                         .IsRequired()
-                        .HasConstraintName("FK__emprestim__id_cl__4E88ABD4");
+                        .HasConstraintName("FK__emprestim__id_cl__403A8C7D");
 
                     b.HasOne("LibraryC.Models.Livro", "IdLivroNavigation")
                         .WithMany("Emprestimo")
                         .HasForeignKey("IdLivro")
                         .IsRequired()
-                        .HasConstraintName("FK__emprestim__id_li__4F7CD00D");
-
-                    b.Navigation("IdBibliotecaNavigation");
+                        .HasConstraintName("FK__emprestim__id_li__412EB0B6");
 
                     b.Navigation("IdClienteNavigation");
 
@@ -375,26 +300,9 @@ namespace LibraryC.Migrations
                     b.HasOne("LibraryC.Models.Autor", "IdAutorNavigation")
                         .WithMany("Livro")
                         .HasForeignKey("IdAutor")
-                        .HasConstraintName("FK__livro__id_autor__46E78A0C");
+                        .HasConstraintName("FK__livro__id_autor__3D5E1FD2");
 
                     b.Navigation("IdAutorNavigation");
-                });
-
-            modelBuilder.Entity("LibraryC.Models.LivroBiblioteca", b =>
-                {
-                    b.HasOne("LibraryC.Models.Biblioteca", "IdBibliotecaNavigation")
-                        .WithMany("LivroBiblioteca")
-                        .HasForeignKey("IdBiblioteca")
-                        .HasConstraintName("FK__livro_bib__id_bi__4AB81AF0");
-
-                    b.HasOne("LibraryC.Models.Livro", "IdLivroNavigation")
-                        .WithMany("LivroBiblioteca")
-                        .HasForeignKey("IdLivro")
-                        .HasConstraintName("FK__livro_bib__id_li__49C3F6B7");
-
-                    b.Navigation("IdBibliotecaNavigation");
-
-                    b.Navigation("IdLivroNavigation");
                 });
 
             modelBuilder.Entity("LibraryC.Models.Multa", b =>
@@ -403,33 +311,14 @@ namespace LibraryC.Migrations
                         .WithMany("Multa")
                         .HasForeignKey("IdCliente")
                         .IsRequired()
-                        .HasConstraintName("FK__multa__id_client__4222D4EF");
+                        .HasConstraintName("FK__multa__id_client__440B1D61");
 
                     b.Navigation("IdClienteNavigation");
-                });
-
-            modelBuilder.Entity("LibraryC.Models.Usuario", b =>
-                {
-                    b.HasOne("LibraryC.Models.Biblioteca", "IdBibliotecaNavigation")
-                        .WithMany("Usuario")
-                        .HasForeignKey("IdBiblioteca")
-                        .HasConstraintName("FK__usuario__id_bibl__3B75D760");
-
-                    b.Navigation("IdBibliotecaNavigation");
                 });
 
             modelBuilder.Entity("LibraryC.Models.Autor", b =>
                 {
                     b.Navigation("Livro");
-                });
-
-            modelBuilder.Entity("LibraryC.Models.Biblioteca", b =>
-                {
-                    b.Navigation("Emprestimo");
-
-                    b.Navigation("LivroBiblioteca");
-
-                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("LibraryC.Models.Cliente", b =>
@@ -442,8 +331,6 @@ namespace LibraryC.Migrations
             modelBuilder.Entity("LibraryC.Models.Livro", b =>
                 {
                     b.Navigation("Emprestimo");
-
-                    b.Navigation("LivroBiblioteca");
                 });
 #pragma warning restore 612, 618
         }

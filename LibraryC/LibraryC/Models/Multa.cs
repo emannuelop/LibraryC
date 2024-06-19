@@ -15,14 +15,17 @@ public partial class Multa
     [Column("id_multa")]
     public int IdMulta { get; set; }
 
-    [Column("id_cliente")]
-    public int IdCliente { get; set; }
+    [Column("data")]
+    public DateOnly? Data { get; set; }
+
+    [Required]
+    [Column("motivo")]
+    [StringLength(255)]
+    [Unicode(false)]
+    public string Motivo { get; set; }
 
     [Column("valor", TypeName = "decimal(10, 2)")]
     public decimal Valor { get; set; }
-
-    [Column("data")]
-    public DateOnly? Data { get; set; }
 
     [Required]
     [Column("status")]
@@ -30,11 +33,8 @@ public partial class Multa
     [Unicode(false)]
     public string Status { get; set; }
 
-    [Required]
-    [Column("motivo")]
-    [StringLength(255)]
-    [Unicode(false)]
-    public string Motivo { get; set; }
+    [Column("id_cliente")]
+    public int IdCliente { get; set; }
 
     [ForeignKey("IdCliente")]
     [InverseProperty("Multa")]

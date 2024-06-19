@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LibraryC.DTOs
 {
@@ -12,5 +13,7 @@ namespace LibraryC.DTOs
         public int? AnoPublicacao { get; set; }
 
         public int? IdAutor { get; set; }
+
+        public int Quantidade { get; set; }
     }
 }

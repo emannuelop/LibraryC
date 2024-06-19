@@ -15,15 +15,11 @@ public partial class LibrarycContext : DbContext
 
     public virtual DbSet<Autor> Autor { get; set; }
 
-    public virtual DbSet<Biblioteca> Biblioteca { get; set; }
-
     public virtual DbSet<Cliente> Cliente { get; set; }
 
     public virtual DbSet<Emprestimo> Emprestimo { get; set; }
 
     public virtual DbSet<Livro> Livro { get; set; }
-
-    public virtual DbSet<LivroBiblioteca> LivroBiblioteca { get; set; }
 
     public virtual DbSet<Multa> Multa { get; set; }
 
@@ -33,64 +29,46 @@ public partial class LibrarycContext : DbContext
     {
         modelBuilder.Entity<Autor>(entity =>
         {
-            entity.HasKey(e => e.IdAutor).HasName("PK__autor__5FC3872DC301C732");
-        });
-
-        modelBuilder.Entity<Biblioteca>(entity =>
-        {
-            entity.HasKey(e => e.IdBiblioteca).HasName("PK__bibliote__1EEBBDFE281AC4B8");
+            entity.HasKey(e => e.IdAutor).HasName("PK__autor__5FC3872D8D84111E");
         });
 
         modelBuilder.Entity<Cliente>(entity =>
         {
-            entity.HasKey(e => e.IdCliente).HasName("PK__cliente__677F38F5CA8CA5A3");
+            entity.HasKey(e => e.IdCliente).HasName("PK__cliente__677F38F5ADCBD31A");
         });
 
         modelBuilder.Entity<Emprestimo>(entity =>
         {
-            entity.HasKey(e => e.IdEmprestimo).HasName("PK__empresti__45FD187E42C5A0B8");
-
-            entity.HasOne(d => d.IdBibliotecaNavigation).WithMany(p => p.Emprestimo).HasConstraintName("FK__emprestim__id_bi__4D94879B");
+            entity.HasKey(e => e.IdEmprestimo).HasName("PK__empresti__45FD187EAB0C3519");
 
             entity.HasOne(d => d.IdClienteNavigation).WithMany(p => p.Emprestimo)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__emprestim__id_cl__4E88ABD4");
+                .HasConstraintName("FK__emprestim__id_cl__403A8C7D");
 
             entity.HasOne(d => d.IdLivroNavigation).WithMany(p => p.Emprestimo)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__emprestim__id_li__4F7CD00D");
+                .HasConstraintName("FK__emprestim__id_li__412EB0B6");
         });
 
         modelBuilder.Entity<Livro>(entity =>
         {
-            entity.HasKey(e => e.IdLivro).HasName("PK__livro__C252147DF73055FC");
+            entity.HasKey(e => e.IdLivro).HasName("PK__livro__C252147D34AEE0DA");
 
-            entity.HasOne(d => d.IdAutorNavigation).WithMany(p => p.Livro).HasConstraintName("FK__livro__id_autor__46E78A0C");
-        });
-
-        modelBuilder.Entity<LivroBiblioteca>(entity =>
-        {
-            entity.HasKey(e => e.IdLivroBiblioteca).HasName("PK__livro_bi__C7822DFEA5F88D41");
-
-            entity.HasOne(d => d.IdBibliotecaNavigation).WithMany(p => p.LivroBiblioteca).HasConstraintName("FK__livro_bib__id_bi__4AB81AF0");
-
-            entity.HasOne(d => d.IdLivroNavigation).WithMany(p => p.LivroBiblioteca).HasConstraintName("FK__livro_bib__id_li__49C3F6B7");
+            entity.HasOne(d => d.IdAutorNavigation).WithMany(p => p.Livro).HasConstraintName("FK__livro__id_autor__3D5E1FD2");
         });
 
         modelBuilder.Entity<Multa>(entity =>
         {
-            entity.HasKey(e => e.IdMulta).HasName("PK__multa__295650BB36BC9AE5");
+            entity.HasKey(e => e.IdMulta).HasName("PK__multa__295650BB02D87DB9");
 
             entity.HasOne(d => d.IdClienteNavigation).WithMany(p => p.Multa)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__multa__id_client__4222D4EF");
+                .HasConstraintName("FK__multa__id_client__440B1D61");
         });
 
         modelBuilder.Entity<Usuario>(entity =>
         {
-            entity.HasKey(e => e.IdUsuario).HasName("PK__usuario__4E3E04AD8C3DEA94");
-
-            entity.HasOne(d => d.IdBibliotecaNavigation).WithMany(p => p.Usuario).HasConstraintName("FK__usuario__id_bibl__3B75D760");
+            entity.HasKey(e => e.IdUsuario).HasName("PK__usuario__4E3E04ADBB2183BB");
         });
 
         OnModelCreatingPartial(modelBuilder);

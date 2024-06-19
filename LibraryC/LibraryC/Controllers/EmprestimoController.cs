@@ -13,15 +13,12 @@ namespace LibraryC.Controllers
     {
         private readonly IEmprestimoRepository _emprestimoRepository;
 
-        private readonly ILivroBibliotecaRepository _livroBibliotecaRepository;
-
         private readonly IMapper _mapper;
 
-        public EmprestimoController(IEmprestimoRepository emprestimoRepository, IMapper mapper, ILivroBibliotecaRepository livroBibliotecaRepository)
+        public EmprestimoController(IEmprestimoRepository emprestimoRepository, IMapper mapper)
         {
             _emprestimoRepository = emprestimoRepository;
             _mapper = mapper;
-            _livroBibliotecaRepository = livroBibliotecaRepository;
         }
 
 
@@ -39,8 +36,6 @@ namespace LibraryC.Controllers
         {
             DateOnly dataAtual = DateOnly.FromDateTime(DateTime.Now);
 
-            var livroBiblioteca = await _livroBibliotecaRepository.LivroBibliotecaPorIdLivroEIdBiblioteca(emprestimo.IdLivro,1);
-
             Emprestimo newEmprestimo = new Emprestimo();
 
             newEmprestimo.IdLivro = emprestimo.IdLivro;
@@ -53,7 +48,6 @@ namespace LibraryC.Controllers
 
 
             _emprestimoRepository.Incluir(newEmprestimo);
-            _livroBibliotecaRepository.DiminuirQuantidadeLivro(livroBiblioteca);
             if (await _emprestimoRepository.SaveAllAsync())
             {
                 return Ok(emprestimo);

@@ -52,6 +52,7 @@ namespace LibraryC.Controllers
             livroUpdate.Titulo = livro.Titulo;
             livroUpdate.AnoPublicacao = livro.AnoPublicacao;
             livroUpdate.IdAutor = livro.IdAutor;
+            livroUpdate.Quantidade = livro.Quantidade;
 
             _livroRepository.Alterar(livroUpdate);
             if (await _livroRepository.SaveAllAsync())

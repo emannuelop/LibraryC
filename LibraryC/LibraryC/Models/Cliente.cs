@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore;
 namespace LibraryC.Models;
 
 [Table("cliente")]
-[Index("Email", Name = "UQ__cliente__AB6E616407A7B8AF", IsUnique = true)]
-[Index("Cpf", Name = "UQ__cliente__D836E71F90420DBC", IsUnique = true)]
+[Index("Email", Name = "UQ__cliente__AB6E6164D20DC6AE", IsUnique = true)]
+[Index("Cpf", Name = "UQ__cliente__D836E71F47A837ED", IsUnique = true)]
 public partial class Cliente
 {
     [Key]
@@ -29,15 +29,15 @@ public partial class Cliente
     [Unicode(false)]
     public string Email { get; set; }
 
-    [Column("telefone")]
-    [StringLength(20)]
-    [Unicode(false)]
-    public string Telefone { get; set; }
-
     [Column("cpf")]
     [StringLength(14)]
     [Unicode(false)]
     public string Cpf { get; set; }
+
+    [Column("telefone")]
+    [StringLength(20)]
+    [Unicode(false)]
+    public string Telefone { get; set; }
 
     [InverseProperty("IdClienteNavigation")]
     public virtual ICollection<Emprestimo> Emprestimo { get; set; } = new List<Emprestimo>();

@@ -1,6 +1,6 @@
 ﻿{
    "CodeGenerationMode": 4,
-   "ContextClassName": "librarycContext",
+   "ContextClassName": "LibrarycContext",
    "ContextNamespace": null,
    "FilterSchemas": false,
    "IncludeConnectionString": false,
@@ -19,10 +19,6 @@
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[biblioteca]",
-         "ObjectType": 0
-      },
-      {
          "Name": "[dbo].[cliente]",
          "ObjectType": 0
       },
@@ -32,10 +28,6 @@
       },
       {
          "Name": "[dbo].[livro]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[livro_biblioteca]",
          "ObjectType": 0
       },
       {

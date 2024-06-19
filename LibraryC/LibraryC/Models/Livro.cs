@@ -27,13 +27,13 @@ public partial class Livro
     [Column("id_autor")]
     public int? IdAutor { get; set; }
 
+    [Column("quantidade")]
+    public int Quantidade { get; set; }
+
     [InverseProperty("IdLivroNavigation")]
     public virtual ICollection<Emprestimo> Emprestimo { get; set; } = new List<Emprestimo>();
 
     [ForeignKey("IdAutor")]
     [InverseProperty("Livro")]
     public virtual Autor IdAutorNavigation { get; set; }
-
-    [InverseProperty("IdLivroNavigation")]
-    public virtual ICollection<LivroBiblioteca> LivroBiblioteca { get; set; } = new List<LivroBiblioteca>();
 }

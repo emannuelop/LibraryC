@@ -26,6 +26,17 @@
                             }
                         </mat-error>
                     </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="full-width-input">
+                        <mat-label>Quantidade</mat-label>
+                        <input matInput type="number" formControlName="quantidade" #inputQuantidade>
+                        <mat-error *ngIf="formGroup.get('quantidade')?.errors && 
+                                        formGroup.get('quantidade')?.touched">
+                            @if (formGroup.get('quantidade')?.hasError('apiError')) {
+                                <span>{{ formGroup.get('quantidade')?.getError('apiError') }}</span>
+                            }
+                        </mat-error>
+                    </mat-form-field>
                     <!--end price-->
                     <!--begin inventory-->
                     <mat-form-field appearance="fill" class="full-width-input">
@@ -57,7 +68,7 @@
                     Excluir 
                 </button>
                 <button mat-raised-button  
-                        routerLink="/livros"> 
+                        routerLink="/admin/livros"> 
                     Cancelar 
                 </button>
 

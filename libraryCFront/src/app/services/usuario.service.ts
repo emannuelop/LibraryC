@@ -17,6 +17,12 @@ export class UsuarioService {
     return this.httpClient.get<Usuario[]>(`${this.baseUrl}`);
   }
 
+  findAllRoles(): Observable<String[]> {
+    // variavel de escopo de bloco
+
+    return this.httpClient.get<String[]>(`${this.baseUrl}/roles`);
+  }
+
   findById(id: string): Observable<Usuario> {
     console.log(id)
     return this.httpClient.get<Usuario>(`${this.baseUrl}/${id}`);
@@ -40,14 +46,21 @@ export class UsuarioService {
         nome: usuario.nome,
         email : usuario.email,
         cpf: usuario.cpf,
-        perfil: usuario.perfil,
-        senha: usuario.senha
+        perfil: usuario.perfil
     }
-    return this.httpClient.put<Usuario>(`${this.baseUrl}/${usuario.id}`, obj);
+    return this.httpClient.put<Usuario>(`${this.baseUrl}/${usuario.idUsuario}`, obj);
   }
 
   delete(id: number): Observable<void> { // Alteração aqui
     return this.httpClient.delete<void>(`${this.baseUrl}/${id}`);
+  }
+
+  alterarSenha(senhaAtual: string, senhaNova: string): Observable<void> { // Alteração aqui
+    const obj = {
+      senhaAtual: senhaAtual,
+      senhaNova : senhaNova
+  }
+    return this.httpClient.patch<void>(`${this.baseUrl}/alterar-senha`, obj);
   }
 
 }

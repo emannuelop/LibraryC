@@ -16,5 +16,7 @@ namespace LibraryC.DTOs
         public DateOnly Data { get; set; }
 
         public string Motivo { get; set; }
+
+        public string Status { get; set; }
     }
 }

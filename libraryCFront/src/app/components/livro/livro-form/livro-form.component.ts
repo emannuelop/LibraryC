@@ -49,7 +49,8 @@ export class LivroFormComponent implements OnInit {
       idLivro: [(livro && livro.idLivro) ? livro.idLivro : null],
       titulo: ['', Validators.required],
       anoPublicacao: [null],
-      idAutor: [null]
+      idAutor: [null],
+      quantidade: [null]
     });
   }
   ngOnInit(): void {
@@ -70,7 +71,8 @@ export class LivroFormComponent implements OnInit {
         Validators.compose([Validators.required, 
                             Validators.minLength(3)])],
       anoPublicacao: [(livro && livro.anoPublicacao) ? livro.anoPublicacao : null],
-      idAutor: [(livro && livro.idAutor) ? livro.idAutor : null]
+      idAutor: [(livro && livro.idAutor) ? livro.idAutor : null],
+      quantidade: [(livro && livro.quantidade) ? livro.quantidade : null]
     });
 
   }
@@ -86,7 +88,7 @@ export class LivroFormComponent implements OnInit {
           next: (livroCadastrado) => {
             console.log(livroCadastrado)
             this.showSnackbarTopPosition('Livro adicionado com sucesso!', 'Fechar');
-            this.router.navigateByUrl('/livros');
+            this.router.navigateByUrl('/admin/livros');
           },
           error: (errorResponse) => {      
             console.log('Erro ao incluir' + JSON.stringify(errorResponse));
@@ -97,7 +99,7 @@ export class LivroFormComponent implements OnInit {
           next: (livroAtualizado) => {
             console.log(livroAtualizado.idLivro)
             this.showSnackbarTopPosition('Livro atualizado com sucesso!', 'Fechar');
-            this.router.navigateByUrl('/livros');
+            this.router.navigateByUrl('/admin/livros');
           },
           error: (err) => {
             console.log('Erro ao alterar' + JSON.stringify(err));
@@ -135,7 +137,7 @@ export class LivroFormComponent implements OnInit {
       if (livro.id != null) {
         this.livroService.delete(livro.id).subscribe({
           next: () => {
-            this.router.navigateByUrl('/admin/livros');
+            this.router.navigateByUrl('/admin/admin/livros');
             this.showSnackbarTopPosition('Livro deletado com sucesso!', 'Fechar');
           },
           error: (err) => {

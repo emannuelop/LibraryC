@@ -46,9 +46,8 @@ export class AutorFormComponent implements OnInit {
     const autor: Autor = this.activatedRoute.snapshot.data['autor'];
 
     this.formGroup = formBuilder.group({
-      idAutor: [(autor && autor.IdAutor) ? autor.IdAutor : null],
-      nome: ['', Validators.required],
-      IdAutor: [null]
+      idAutor: [(autor && autor.idAutor) ? autor.idAutor : null],
+      nome: ['', Validators.required]
     });
   }
   ngOnInit(): void {
@@ -62,7 +61,7 @@ export class AutorFormComponent implements OnInit {
     // selecionando as associações
 
     this.formGroup = this.formBuilder.group({
-      idAutor: [(autor && autor.IdAutor) ? autor.IdAutor : null],
+      idAutor: [(autor && autor.idAutor) ? autor.idAutor : null],
       nome: [(autor && autor.nome) ? autor.nome : '', 
         Validators.compose([Validators.required, 
                             Validators.minLength(3)])]
@@ -81,7 +80,7 @@ export class AutorFormComponent implements OnInit {
           next: (autorCadastrado) => {
             console.log(autorCadastrado)
             this.showSnackbarTopPosition('Autor adicionado com sucesso!', 'Fechar');
-            this.router.navigateByUrl('/autores');
+            this.router.navigateByUrl('/admin/autores');
           },
           error: (errorResponse) => {      
             console.log('Erro ao incluir' + JSON.stringify(errorResponse));
@@ -90,9 +89,9 @@ export class AutorFormComponent implements OnInit {
       } else {
         this.autorService.update(autor).subscribe({
           next: (autorAtualizado) => {
-            console.log(autorAtualizado.IdAutor)
+            console.log(autorAtualizado.idAutor)
             this.showSnackbarTopPosition('Autor atualizado com sucesso!', 'Fechar');
-            this.router.navigateByUrl('/autores');
+            this.router.navigateByUrl('/admin/autores');
           },
           error: (err) => {
             console.log('Erro ao alterar' + JSON.stringify(err));

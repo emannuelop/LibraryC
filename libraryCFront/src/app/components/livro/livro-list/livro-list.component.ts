@@ -9,6 +9,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { CommonModule } from '@angular/common';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import {
   MatDialog,
@@ -23,18 +28,19 @@ import {
   selector: 'app-livro-list',
   standalone: true,
   imports: [NgFor, MatTableModule, MatToolbarModule, MatIconModule
-    , MatButtonModule, RouterModule, MatPaginatorModule, CommonModule],
+    , MatButtonModule, RouterModule, MatPaginatorModule, CommonModule, MatSnackBarModule, MatFormFieldModule,MatInputModule, FormsModule],
   templateUrl: './livro-list.component.html',
   styleUrl: './livro-list.component.css'
 })
 export class LivroListComponent implements OnInit {
-  displayedColumns: string[] = ['idLivro', 'titulo', 'anoPublicacao' , 'idAutor', 'action'];
+  displayedColumns: string[] = ['idLivro', 'titulo', 'anoPublicacao' , 'quantidade', 'idAutor', 'action'];
   livros: Livro[] = [];
 
   // variaveis de controle de paginacao
   totalRecords = 0;
   pageSize = 8;
   page = 0;
+  filtro: string = "";
 
   constructor(private livroService: LivroService,
               public dialog: MatDialog
@@ -56,6 +62,24 @@ export class LivroListComponent implements OnInit {
     this.page = event.pageIndex;
     this.pageSize = event.pageSize;
     this.loadLivros();
+  }
+
+  aplicarFiltro() {
+    this.carregarLivros();
+  }
+
+  carregarLivros() {
+    if(this.filtro){
+      this.livroService.findByTitulo(this.filtro).subscribe(data => {
+        this.livros = data;
+      })
+
+    }else{
+
+    this.livroService.findAll().subscribe(data => {
+      this.livros = data;
+    })
+  };
   }
 
   delete(id: number): void {

@@ -25,7 +25,7 @@ export class AutorService {
   insert(autor: Autor): Observable<Autor> {
     
     const obj = {
-      IdAutortulo: autor.IdAutor,
+      idAutortulo: autor.idAutor,
       nome : autor.nome
     }
 
@@ -34,10 +34,10 @@ export class AutorService {
   
   update(autor: Autor): Observable<Autor> {
     const obj = {
-        tiIdAutortulo: autor.IdAutor,
+        idAutor: autor.idAutor,
         nome : autor.nome
     }
-    return this.httpClient.put<Autor>(`${this.baseUrl}/${autor.IdAutor}`, obj);
+    return this.httpClient.put<Autor>(`${this.baseUrl}/${autor.idAutor}`, obj);
   }
 
   delete(id: number): Observable<void> { // Alteração aqui

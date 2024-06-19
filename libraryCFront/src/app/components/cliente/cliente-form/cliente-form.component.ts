@@ -87,12 +87,12 @@ export class ClienteFormComponent implements OnInit {
     if (this.formGroup.valid) {
       const cliente = this.formGroup.value;
       console.log(cliente);
-      if (cliente.id == null) {
+      if (cliente.idCliente == null) {
         this.clienteService.insert(cliente).subscribe({
           next: (clienteCadastrado) => {
             console.log(clienteCadastrado.idCliente)
             this.showSnackbarTopPosition('Cliente adicionado com sucesso!', 'Fechar');
-            this.router.navigateByUrl('/clientes');
+            this.router.navigateByUrl('/admin/clientes');
           },
           error: (errorResponse) => {      
             console.log('Erro ao incluir' + JSON.stringify(errorResponse));
@@ -103,7 +103,7 @@ export class ClienteFormComponent implements OnInit {
           next: (clienteAtualizado) => {
             console.log(clienteAtualizado)
             this.showSnackbarTopPosition('Cliente atualizado com sucesso!', 'Fechar');
-            this.router.navigateByUrl('/clientes');
+            this.router.navigateByUrl('/admin/clientes');
           },
           error: (err) => {
             console.log('Erro ao alterar' + JSON.stringify(err));

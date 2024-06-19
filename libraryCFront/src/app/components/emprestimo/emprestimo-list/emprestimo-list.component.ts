@@ -65,5 +65,12 @@ export class EmprestimoListComponent implements OnInit {
       });
     }
   }
+  devolver(id: number): void {
+    if (confirm('Tem certeza que foi devolvido este emprestimo?')) {
+      this.emprestimoService.devolucao(id).subscribe((data) => {
+        this.loadEmprestimos();
+      });
+    }
+  }
 
 }

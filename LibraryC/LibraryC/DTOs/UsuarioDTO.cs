@@ -15,7 +15,6 @@ namespace LibraryC.DTOs
         [StringLength(100)]
         public string Email { get; set; }
 
-        [Required]
         [StringLength(255)]
         public string Senha { get; set; }
 

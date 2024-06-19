@@ -72,6 +72,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
   deslogar() {
     this.authService.removeToken();
     this.authService.removeUsuarioLogado();
+    this.router.navigate(['/login']);
+  }
+
+  alterarSenha() {
+    this.router.navigate(['/admin/alterar-senha']);
   }
 
   dashboard() {

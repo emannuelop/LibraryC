@@ -5,6 +5,7 @@ using LibraryC.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.Elfie.Serialization;
 
 namespace LibraryC.Controllers
 {
@@ -30,6 +31,15 @@ namespace LibraryC.Controllers
             var livroesDTO = _mapper.Map<IEnumerable<LivroResponseDTO>>(livroes);
 
             return Ok(livroesDTO);
+        }
+
+        [HttpGet("livrosByTitulo/{filtro}")]
+        public async Task<ActionResult<IEnumerable<Livro>>> GetLivrosByTitulo(String filtro)
+        {
+            var livroes = await _livroRepository.SelecionarTodos();
+            var livroesDTO = _mapper.Map<IEnumerable<LivroResponseDTO>>(livroes);
+
+            return Ok(livroesDTO.Where(u => u.Titulo.Contains(filtro)));
         }
 
         [HttpPost]
@@ -72,7 +82,7 @@ namespace LibraryC.Controllers
             _livroRepository.Excluir(livro);
             if (await _livroRepository.SaveAllAsync())
             {
-                return Ok();
+                return Ok(id);
             }
 
             return BadRequest("Erro ao excluir livro");

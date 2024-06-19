@@ -33,6 +33,7 @@ export class UsuarioFormComponent implements OnInit {
   selectedFile: File | null = null;
   imagePreview: string | ArrayBuffer | null = null;
   apiResponse: any = null;
+  listaString: String[]= [];
 
   constructor(
               private formBuilder: FormBuilder,
@@ -46,7 +47,7 @@ export class UsuarioFormComponent implements OnInit {
     const usuario: Usuario = this.activatedRoute.snapshot.data['usuario'];
 
     this.formGroup = formBuilder.group({
-      idUsuario: [(usuario && usuario.id) ? usuario.id : null],
+      idUsuario: [(usuario && usuario.idUsuario) ? usuario.idUsuario : null],
       nome: ['', Validators.required],
       email: ['', Validators.required],
       cpf: ['', Validators.required],
@@ -56,6 +57,11 @@ export class UsuarioFormComponent implements OnInit {
   }
   ngOnInit(): void {
     this.initializeForm();
+
+    this.usuarioService.findAllRoles().subscribe(data => {
+      this.listaString = data;
+     this.initializeForm();
+    });
   }
 
   initializeForm() {
@@ -65,7 +71,7 @@ export class UsuarioFormComponent implements OnInit {
     // selecionando as associações
 
     this.formGroup = this.formBuilder.group({
-      idUsuario: [(usuario && usuario.id) ? usuario.id : null],
+      idUsuario: [(usuario && usuario.idUsuario) ? usuario.idUsuario : null],
       nome: [(usuario && usuario.nome) ? usuario.nome : '', 
         Validators.compose([Validators.required, 
                             Validators.minLength(3)])],
@@ -91,12 +97,12 @@ export class UsuarioFormComponent implements OnInit {
     if (this.formGroup.valid) {
       const usuario = this.formGroup.value;
       console.log(usuario);
-      if (usuario.id == null) {
+      if (usuario.idUsuario == null) {
         this.usuarioService.insert(usuario).subscribe({
           next: (usuarioCadastrado) => {
             console.log(usuarioCadastrado)
             this.showSnackbarTopPosition('Usuario adicionado com sucesso!', 'Fechar');
-            this.router.navigateByUrl('/usuarios');
+            this.router.navigateByUrl('/admin/usuarios');
           },
           error: (errorResponse) => {      
             console.log('Erro ao incluir' + JSON.stringify(errorResponse));
@@ -105,9 +111,9 @@ export class UsuarioFormComponent implements OnInit {
       } else {
         this.usuarioService.update(usuario).subscribe({
           next: (usuarioAtualizado) => {
-            console.log(usuarioAtualizado.id)
+            console.log(usuarioAtualizado.idUsuario)
             this.showSnackbarTopPosition('Usuario atualizado com sucesso!', 'Fechar');
-            this.router.navigateByUrl('/usuarios');
+            this.router.navigateByUrl('/admin/usuarios');
           },
           error: (err) => {
             console.log('Erro ao alterar' + JSON.stringify(err));
@@ -145,7 +151,7 @@ export class UsuarioFormComponent implements OnInit {
       if (usuario.id != null) {
         this.usuarioService.delete(usuario.id).subscribe({
           next: () => {
-            this.router.navigateByUrl('/usuarios');
+            this.router.navigateByUrl('/admin/usuarios');
             this.showSnackbarTopPosition('Usuario deletado com sucesso!', 'Fechar');
           },
           error: (err) => {

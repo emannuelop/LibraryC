@@ -70,7 +70,7 @@ namespace LibraryC.Controllers
             _autorRepository.Excluir(autor);
             if (await _autorRepository.SaveAllAsync())
             {
-                return Ok("Autor excluido com sucesso");
+                return Ok(id);
             }
 
             return BadRequest("Erro ao excluir autor");

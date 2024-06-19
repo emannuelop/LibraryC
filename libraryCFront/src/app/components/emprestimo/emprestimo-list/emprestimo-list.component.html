@@ -2,7 +2,7 @@
   <mat-toolbar color="#fff">
     <div class="flex-container">
       <span class="toolbar-title">Controle de Emprestimos</span>
-      <button mat-fab color="accent" routerLink="/emprestimos/new">
+      <button mat-fab color="accent" routerLink="/admin/emprestimos/new">
         <mat-icon>add</mat-icon>
       </button>
     </div>
@@ -55,14 +55,19 @@
         <td mat-cell *matCellDef="let element"> 
           <button mat-icon-button 
                   color="primary"
-                  routerLink="/emprestimos/edit/{{element.idEmprestimo}}">
+                  routerLink="/admin/emprestimos/edit/{{element.idEmprestimo}}">
                   <mat-icon>edit</mat-icon>
           </button>
           <button mat-icon-button 
                   color="warn" 
                   (click)="delete(element.idEmprestimo)">
                   <mat-icon>delete</mat-icon>
-          </button> 
+          </button>
+          <button mat-icon-button 
+                  color="primary" 
+                  (click)="devolver(element.idEmprestimo)">
+                  <mat-icon>menu_book</mat-icon>
+          </button>  
           
         </td>
       </ng-container>
@@ -70,11 +75,4 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-
-    <mat-paginator 
-      [pageSizeOptions]="[2, 4, 8, 16, 32, 100]" 
-      [pageSize]="pageSize" 
-      [length]="totalRecords"
-      (page)="paginar($event)">
-    </mat-paginator>
 </div>

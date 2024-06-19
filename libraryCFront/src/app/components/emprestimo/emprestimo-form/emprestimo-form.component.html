@@ -1,6 +1,6 @@
 <div class="page-container">
     <mat-toolbar color="#fff">
-        <span class="toolbar-title">Cadastro de Livros</span>
+        <span class="toolbar-title">Cadastro de Emprestimos</span>
     </mat-toolbar>
     <div class="form-container">
         <mat-card>
@@ -26,17 +26,19 @@
                             }
                         </mat-error>
                     </mat-form-field>
-                    <mat-form-field appearance="fill" class="full-width-input">
-                        <mat-label>Data Prevista Devolução</mat-label>
-                        <input matInput type="date" formControlName="dataPrevistaDevolucao">
-                        <mat-error *ngIf="formGroup.get('dataPrevistaDevolucao')?.errors && 
-                                        formGroup.get('dataPrevistaDevolucao')?.touched">
 
-                            @if (formGroup.get('dataPrevistaDevolucao')?.hasError('apiError')) {
-                                <span>{{ formGroup.get('dataPrevistaDevolucao')?.getError('apiError') }}</span>
-                            }
-                        </mat-error>
-                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="full-width-input">
+                      <mat-label>Data Prevista Devolução</mat-label>
+                      <input matInput type="date" formControlName="dataPrevistaDevolucao" >
+                      <mat-error *ngIf="formGroup.get('dataPrevistaDevolucao')?.errors && 
+                                      formGroup.get('dataPrevistaDevolucao')?.touched">
+
+                          @if (formGroup.get('dataPrevistaDevolucao')?.hasError('apiError')) {
+                              <span>{{ formGroup.get('dataPrevistaDevolucao')?.getError('apiError') }}</span>
+                          }
+                      </mat-error>
+                  </mat-form-field>
+
                     
                 </form>
                 </mat-card-content>
@@ -55,7 +57,7 @@
                     Excluir 
                 </button>
                 <button mat-raised-button  
-                        routerLink="/livros"> 
+                        routerLink="/admin/emprestimos"> 
                     Cancelar 
                 </button>
 

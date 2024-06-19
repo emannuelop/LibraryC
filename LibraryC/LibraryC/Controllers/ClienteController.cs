@@ -71,7 +71,7 @@ namespace LibraryC.Controllers
             _clienteRepository.Excluir(cliente);
             if (await _clienteRepository.SaveAllAsync())
             {
-                return Ok("Cliente excluido com sucesso");
+                return Ok(id);
             }
 
             return BadRequest("Erro ao excluir cliente");

@@ -1,4 +1,4 @@
 export class Autor {
-    IdAutor!: number;
+    idAutor!: number;
     nome!: string
 }

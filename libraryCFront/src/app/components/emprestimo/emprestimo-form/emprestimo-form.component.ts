@@ -1,6 +1,6 @@
 import { NgIf, Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -15,13 +15,16 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatIcon } from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { EmprestimoService } from '../../../services/emprestimo.service';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
 
 @Component({
   selector: 'app-emprestimo-form',
   standalone: true,
   imports: [NgIf, ReactiveFormsModule, MatFormFieldModule,
     MatInputModule, MatButtonModule, MatCardModule, MatToolbarModule, 
-    RouterModule, MatSelectModule, CommonModule, MatCheckboxModule, MatIcon],
+    RouterModule, MatSelectModule, CommonModule, MatCheckboxModule, MatIcon, MatDatepickerModule,MatNativeDateModule],
   templateUrl: './emprestimo-form.component.html',
   styleUrl: './emprestimo-form.component.css'
 })
@@ -49,7 +52,8 @@ export class EmprestimoFormComponent implements OnInit {
       idEmprestimo: [(emprestimo && emprestimo.idEmprestimo) ? emprestimo.idEmprestimo : null],
       idCliente: [null],
       idLivro: [null],
-      dataPrevistaDevolucao: [null]
+      dataPrevistaDevolucao: [['', [Validators.required]]
+    ]
     });
   }
   ngOnInit(): void {
@@ -73,18 +77,24 @@ export class EmprestimoFormComponent implements OnInit {
 
   }
 
+  get dataPrevistaDevolucao(): Date | null {
+    const dateValue = this.formGroup.get('dataPrevistaDevolucao')?.value;
+    return dateValue ? new Date(dateValue) : null;
+  }
+
   salvar() {
     console.log(this.formGroup);
     // marca todos os campos do formulario como 'touched'
     if (this.formGroup.valid) {
       const emprestimo = this.formGroup.value;
+      console.log(emprestimo.dataPrevistaDevolucao)
       console.log(emprestimo);
       if (emprestimo.idEmprestimo == null) {
         this.emprestimoService.insert(emprestimo).subscribe({
           next: (emprestimoCadastrado) => {
             console.log(emprestimoCadastrado)
             this.showSnackbarTopPosition('Emprestimo adicionado com sucesso!', 'Fechar');
-            this.router.navigateByUrl('/emprestimos');
+            this.router.navigateByUrl('/admin/emprestimos');
           },
           error: (errorResponse) => {      
             console.log('Erro ao incluir' + JSON.stringify(errorResponse));
@@ -95,7 +105,7 @@ export class EmprestimoFormComponent implements OnInit {
           next: (emprestimoAtualizado) => {
             console.log(emprestimoAtualizado.idEmprestimo)
             this.showSnackbarTopPosition('Emprestimo atualizado com sucesso!', 'Fechar');
-            this.router.navigateByUrl('/emprestimos');
+            this.router.navigateByUrl('/admin/emprestimos');
           },
           error: (err) => {
             console.log('Erro ao alterar' + JSON.stringify(err));

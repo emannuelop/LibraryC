@@ -16,11 +16,25 @@ import { AdminTemplateComponent } from './components/template/admin-template/adm
 import { EmprestimoListComponent } from './components/emprestimo/emprestimo-list/emprestimo-list.component';
 import { EmprestimoFormComponent } from './components/emprestimo/emprestimo-form/emprestimo-form.component';
 import { emprestimoResolver } from './components/emprestimo/resolver/emprestimo-resolver';
+import { MultaListComponent } from './components/multa/multa-list/multa-list.component';
+import { MultaFormComponent } from './components/multa/multa-form/multa-form.component';
+import { multaResolver } from './components/multa/resolver/multa-resolver';
+import { UsuarioSenhaFormComponent } from './components/usuario/usuario-senha/usuariosenha-form.component';
 
 export const routes: Routes = [
 
     {
         path: '',
+        title: 'logi',
+        children: [
+            { path: '', component: LoginComponent, title: 'Login' },
+            { path: 'login', component: LoginComponent, title: 'Login'}
+            
+        ]
+        
+    },
+    {
+        path: 'admin',
         component: AdminTemplateComponent,
         title: 'livro',
         children: [
@@ -41,8 +55,13 @@ export const routes: Routes = [
             { path: 'emprestimos', component: EmprestimoListComponent, title: 'Emprestimo-List'},
             { path: 'emprestimos/new', component: EmprestimoFormComponent, title: 'Emprestimo-Form'},
             { path: 'emprestimos/edit/:id', component: EmprestimoFormComponent, resolve: {emprestimo: emprestimoResolver}},
+            { path: 'multas', component: MultaListComponent, title: 'Multa-List'},
+            { path: 'multas/new', component: MultaFormComponent, title: 'Multa-Form'},
+            { path: 'multas/edit/:id', component: MultaFormComponent, resolve: {multa: multaResolver}},
+            { path: 'alterar-senha', component: UsuarioSenhaFormComponent, title: 'Senha-Form'},
             
         ]
+        
     }
 
 ];

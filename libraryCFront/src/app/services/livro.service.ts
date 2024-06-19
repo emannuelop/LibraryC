@@ -22,12 +22,18 @@ export class LivroService {
     return this.httpClient.get<Livro>(`${this.baseUrl}/${id}`);
   }
 
+  findByTitulo(titulo: string): Observable<Livro[]> {
+    console.log(titulo)
+    return this.httpClient.get<Livro[]>(`${this.baseUrl}/livrosByTitulo/${titulo}`);
+  }
+
   insert(livro: Livro): Observable<Livro> {
     
     const obj = {
       titulo: livro.titulo,
       anoPublicacao : livro.anoPublicacao,
-      idAutor: livro.idAutor
+      idAutor: livro.idAutor,
+      quantidade : livro.quantidade
     }
 
     return this.httpClient.post<Livro>(this.baseUrl, obj);
@@ -37,7 +43,8 @@ export class LivroService {
     const obj = {
       titulo: livro.titulo,
       anoPublicacao : livro.anoPublicacao,
-      idAutor: livro.idAutor
+      idAutor: livro.idAutor,
+      quantidade : livro.quantidade
     }
     return this.httpClient.put<Livro>(`${this.baseUrl}/${livro.idLivro}`, obj);
   }

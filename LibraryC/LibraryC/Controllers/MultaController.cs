@@ -35,19 +35,23 @@ namespace LibraryC.Controllers
         public async Task<ActionResult> CadastrarMulta(MultaDTO multa)
         {
 
-            DateOnly dataAtual = DateOnly.FromDateTime(DateTime.Now);
-
-            var multaPost = new Multa();
-            multaPost.Status = "Em andamento";
-            multaPost.Valor = multa.Valor;
-            multaPost.IdCliente = multa.IdCliente;
-            multaPost.Motivo = multa.Motivo;
-            multaPost.Data = dataAtual;
-
-            _multaRepository.Incluir(multaPost);
-            if (await _multaRepository.SaveAllAsync())
+            if (multa.Status.Equals("Pago")|| multa.Status.Equals("Atrasada")|| multa.Status.Equals("Aguardando Pagamento"))
             {
-                return Ok(multaPost);
+
+                DateOnly dataAtual = DateOnly.FromDateTime(DateTime.Now);
+
+                var multaPost = new Multa();
+                multaPost.Status = multa.Status;
+                multaPost.Valor = multa.Valor;
+                multaPost.IdCliente = multa.IdCliente;
+                multaPost.Motivo = multa.Motivo;
+                multaPost.Data = dataAtual;
+
+                _multaRepository.Incluir(multaPost);
+                if (await _multaRepository.SaveAllAsync())
+                {
+                    return Ok(multaPost);
+                }
             }
 
             return BadRequest("Erro ao salvar multa");
@@ -56,19 +60,38 @@ namespace LibraryC.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult> AlterarMulta(int id, MultaDTO multa)
         {
-            var multaUpdate = await _multaRepository.SelecionarPorId(id);
 
-            multaUpdate.Valor = multa.Valor;
-            multaUpdate.IdCliente = multa.IdCliente;
-            multaUpdate.Motivo = multa.Motivo;
-
-            _multaRepository.Alterar(multaUpdate);
-            if (await _multaRepository.SaveAllAsync())
+            if (multa.Status.Equals("Pago") || multa.Status.Equals("Atrasada") || multa.Status.Equals("Aguardando Pagamento"))
             {
-                return Ok(multaUpdate);
+
+                var multaUpdate = await _multaRepository.SelecionarPorId(id);
+
+                multaUpdate.Valor = multa.Valor;
+                multaUpdate.IdCliente = multa.IdCliente;
+                multaUpdate.Motivo = multa.Motivo;
+                multaUpdate.Status = multa.Status;
+
+                _multaRepository.Alterar(multaUpdate);
+                if (await _multaRepository.SaveAllAsync())
+                {
+                    return Ok(multaUpdate);
+                }
             }
 
             return BadRequest("Erro ao alterar multa");
+        }
+
+        [HttpGet("status")]
+        public async Task<ActionResult<List<String>>> GetStatus()
+        {
+            List<string> listaDeStrings = new List<string>();
+
+            // Adicionando elementos à lista
+            listaDeStrings.Add("Pago");
+            listaDeStrings.Add("Atrasada");
+            listaDeStrings.Add("Aguardando Pagamento");
+
+            return Ok(listaDeStrings);
         }
 
         [HttpDelete("{id}")]
@@ -80,7 +103,7 @@ namespace LibraryC.Controllers
             _multaRepository.Excluir(multa);
             if (await _multaRepository.SaveAllAsync())
             {
-                return Ok("Multa excluido com sucesso");
+                return Ok(id);
             }
 
             return BadRequest("Erro ao excluir multa");

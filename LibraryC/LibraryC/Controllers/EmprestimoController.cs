@@ -13,12 +13,15 @@ namespace LibraryC.Controllers
     {
         private readonly IEmprestimoRepository _emprestimoRepository;
 
+        private readonly ILivroRepository _livroRepository;
+
         private readonly IMapper _mapper;
 
-        public EmprestimoController(IEmprestimoRepository emprestimoRepository, IMapper mapper)
+        public EmprestimoController(IEmprestimoRepository emprestimoRepository, IMapper mapper,ILivroRepository livroRepository)
         {
             _emprestimoRepository = emprestimoRepository;
             _mapper = mapper;
+            _livroRepository = livroRepository;
         }
 
 
@@ -38,13 +41,22 @@ namespace LibraryC.Controllers
 
             Emprestimo newEmprestimo = new Emprestimo();
 
+            var livro = await _livroRepository.SelecionarPorId(emprestimo.IdLivro);
+
+            if (livro == null)
+            {
+                return NotFound("Livro não encontrado");
+            }
+
             newEmprestimo.IdLivro = emprestimo.IdLivro;
             newEmprestimo.IdCliente = emprestimo.IdCliente;
             newEmprestimo.DataPrevistaDevolucao = emprestimo.DataPrevistaDevolucao;
             newEmprestimo.DataEmprestimo = dataAtual;
             newEmprestimo.Status = "Nao devolvido";
 
+            livro.Quantidade--;
 
+            _livroRepository.Alterar(livro);
 
 
             _emprestimoRepository.Incluir(newEmprestimo);
@@ -80,10 +92,21 @@ namespace LibraryC.Controllers
 
             var emprestimo = await _emprestimoRepository.SelecionarPorId(id);
 
+            if (emprestimo.Status.Equals("Nao Devolvido"))
+            {
+
+                var livro = await _livroRepository.SelecionarPorId(emprestimo.IdLivro);
+
+                livro.Quantidade++;
+
+                _livroRepository.Alterar(livro);
+
+            }
+
             _emprestimoRepository.Excluir(emprestimo);
             if (await _emprestimoRepository.SaveAllAsync())
             {
-                return Ok("Emprestimo excluido com sucesso");
+                return Ok(id);
             }
 
             return BadRequest("Erro ao excluir emprestimo");
@@ -98,6 +121,37 @@ namespace LibraryC.Controllers
                 return NotFound("Emprestimo não encontrado");
             }
             return Ok(_mapper.Map<EmprestimoResponseDTO>(emprestimo));
+        }
+
+        [HttpPatch("devolucao/{id}")]
+        public async Task<ActionResult> DevoluçaoEmprestimo(int id)
+        {
+
+            DateOnly dataAtual = DateOnly.FromDateTime(DateTime.Now);
+
+            var emprestimo = await _emprestimoRepository.SelecionarPorId(id);
+            if (emprestimo == null)
+            {
+                return NotFound("Emprestimo não encontrado");
+            }
+
+            emprestimo.Status = "Devolvido";
+            emprestimo.DataDevolucao = dataAtual;
+
+            var livro = await _livroRepository.SelecionarPorId(emprestimo.IdLivro);
+
+            livro.Quantidade++;
+
+            _livroRepository.Alterar(livro);
+
+            _emprestimoRepository.Alterar(emprestimo);
+
+            if (await _emprestimoRepository.SaveAllAsync())
+            {
+                return Ok(_mapper.Map<EmprestimoResponseDTO>(emprestimo));
+            }
+
+            return BadRequest();
         }
     }
 }

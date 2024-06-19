@@ -4,7 +4,9 @@ using LibraryC.Interfaces;
 using LibraryC.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace LibraryC.Controllers
 {
@@ -65,7 +67,7 @@ namespace LibraryC.Controllers
         public async Task<ActionResult> AlterarUsuario(int id, UsuarioDTO usuario)
         {
 
-            if (usuario.Perfil == "admin" || usuario.Perfil == "funcionario")
+            if (usuario.Perfil.Equals("admin") || usuario.Perfil.Equals("funcionario"))
             {
 
                 var usuarioUpdate = await _usuarioRepository.SelecionarPorId(id);
@@ -94,7 +96,7 @@ namespace LibraryC.Controllers
             _usuarioRepository.Excluir(usuario);
             if (await _usuarioRepository.SaveAllAsync())
             {
-                return Ok("Usuario excluido com sucesso");
+                return Ok(id);
             }
 
             return BadRequest("Erro ao excluir usuario");
@@ -110,5 +112,74 @@ namespace LibraryC.Controllers
             }
             return Ok(_mapper.Map<UsuarioResponseDTO>(usuario));
         }
+
+        [HttpGet("roles")]
+        public async Task<ActionResult<List<String>>> GetPerfis()
+        {
+            List<string> listaDeStrings = new List<string>();
+
+            // Adicionando elementos à lista
+            listaDeStrings.Add("admin");
+            listaDeStrings.Add("funcionario");
+
+            return Ok(listaDeStrings);
+        }
+
+        [HttpGet("me")]
+        public async Task<IActionResult> GetCurrentUser()
+        {
+            var userEmail = User.FindFirst(ClaimTypes.Name)?.Value;
+
+            if (userEmail == null)
+            {
+                return Unauthorized();
+            }
+
+            var user = _usuarioRepository.SelecionarPorEmail(userEmail);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(new
+            {
+                user.IdUsuario,
+                user.Email,
+                user.Cpf
+            });
+        }
+
+        [HttpPatch("alterar-senha")]
+        public async Task<IActionResult> AlterarSenha(SenhaDTO senhaDto)
+        {
+            var userEmail = User.FindFirst(ClaimTypes.Name)?.Value;
+
+            if (userEmail == null)
+            {
+                return Unauthorized();
+            }
+
+            var user = _usuarioRepository.SelecionarPorEmail(userEmail);
+
+            if (user == null || !user.Senha.Equals(_tokenService.HashPassword(senhaDto.SenhaAtual)))
+            {
+                return NotFound();
+            }
+
+            user.Senha = _tokenService.HashPassword(senhaDto.SenhaNova);
+
+            _usuarioRepository.Alterar(user);
+
+            await _usuarioRepository.SaveAllAsync();
+
+            return Ok(new
+            {
+                user.IdUsuario,
+                user.Email,
+                user.Cpf
+            });
+        }
+
     }
 }

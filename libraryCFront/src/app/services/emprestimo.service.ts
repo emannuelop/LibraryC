@@ -46,4 +46,8 @@ export class EmprestimoService {
     return this.httpClient.delete<void>(`${this.baseUrl}/${id}`);
   }
 
+  devolucao(id: number): Observable<void> { // Alteração aqui
+    return this.httpClient.patch<void>(`${this.baseUrl}/devolucao/${id}`, {});
+  }
+
 }

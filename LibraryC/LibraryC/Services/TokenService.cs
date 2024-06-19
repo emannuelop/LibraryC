@@ -38,7 +38,7 @@ namespace LibraryC.Services
                 audience: audience,
                 claims:
                 [
-                    new Claim(type: ClaimTypes.Name, user.Nome),
+                    new Claim(type: ClaimTypes.Name, user.Email),
                     new Claim(type: ClaimTypes.Role, user.Perfil)
                 ],
                 expires: DateTime.Now.AddHours(24),

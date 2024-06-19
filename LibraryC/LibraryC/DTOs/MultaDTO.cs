@@ -13,5 +13,7 @@ namespace LibraryC.DTOs
         [Required]
         [StringLength(255)]
         public string Motivo { get; set; }
+
+        public string Status { get; set; }
     }
 }
